@@ -11,7 +11,7 @@ from sklearn.metrics import (
     roc_auc_score,
     mean_absolute_error,
     mean_squared_error,
-    r2_score
+    r2_score,
 )
 
 
@@ -19,21 +19,10 @@ def classification_metrics(
     y_true,
     y_pred,
     y_prob=None,
-    positive_class_index=1
+    positive_class_index=1,
+    positive_label=1,
 ):
-    """
-    Calculate classification evaluation metrics.
-
-    Parameters:
-        y_true: Actual class labels.
-        y_pred: Predicted class labels.
-        y_prob: Optional predicted probabilities.
-        positive_class_index: Column index of the positive
-                              class for binary ROC-AUC.
-
-    Returns:
-        Dictionary containing classification metrics.
-    """
+    """Calculate classification metrics, including delayed-order metrics."""
 
     y_true = np.asarray(y_true)
     y_pred = np.asarray(y_pred)
@@ -50,22 +39,13 @@ def classification_metrics(
     results = {
         "accuracy": accuracy_score(y_true, y_pred),
         "precision": precision_score(
-            y_true,
-            y_pred,
-            average="weighted",
-            zero_division=0
+            y_true, y_pred, average="weighted", zero_division=0
         ),
         "recall": recall_score(
-            y_true,
-            y_pred,
-            average="weighted",
-            zero_division=0
+            y_true, y_pred, average="weighted", zero_division=0
         ),
         "f1_score": f1_score(
-            y_true,
-            y_pred,
-            average="weighted",
-            zero_division=0
+            y_true, y_pred, average="weighted", zero_division=0
         ),
         "confusion_matrix": confusion_matrix(
             y_true, y_pred
@@ -74,13 +54,33 @@ def classification_metrics(
             y_true,
             y_pred,
             output_dict=True,
-            zero_division=0
-        )
+            zero_division=0,
+        ),
     }
 
-    # ROC-AUC is calculated only for binary classification.
-    if y_prob is not None and len(np.unique(y_true)) == 2:
+    # Additional metrics for binary delayed-order classification.
+    if len(np.unique(y_true)) == 2 and positive_label in np.unique(y_true):
+        results["delayed_precision"] = precision_score(
+            y_true, y_pred, pos_label=positive_label, zero_division=0
+        )
+        results["delayed_recall"] = recall_score(
+            y_true, y_pred, pos_label=positive_label, zero_division=0
+        )
+        results["delayed_f1"] = f1_score(
+            y_true, y_pred, pos_label=positive_label, zero_division=0
+        )
 
+        other_label = next(
+            label for label in np.unique(y_true)
+            if label != positive_label
+        )
+
+        results["on_time_recall"] = recall_score(
+            y_true, y_pred, pos_label=other_label, zero_division=0
+        )
+
+    # Calculate ROC-AUC when binary probabilities are provided.
+    if y_prob is not None and len(np.unique(y_true)) == 2:
         probabilities = np.asarray(y_prob)
 
         if probabilities.ndim == 2:
@@ -94,25 +94,19 @@ def classification_metrics(
                 "Probability values must match the number of samples."
             )
 
+        if not np.isfinite(probabilities).all():
+            raise ValueError("Probability values must be finite.")
+
         results["roc_auc"] = roc_auc_score(
-            y_true,
-            probabilities
+            (y_true == positive_label).astype(int),
+            probabilities,
         )
 
     return results
 
 
 def regression_metrics(y_true, y_pred):
-    """
-    Calculate regression evaluation metrics.
-
-    Parameters:
-        y_true: Actual numerical values.
-        y_pred: Predicted numerical values.
-
-    Returns:
-        Dictionary containing regression metrics.
-    """
+    """Calculate regression evaluation metrics."""
 
     y_true = np.asarray(y_true)
     y_pred = np.asarray(y_pred)
@@ -131,14 +125,12 @@ def regression_metrics(y_true, y_pred):
 
     mse = mean_squared_error(y_true, y_pred)
 
-    results = {
+    return {
         "mae": mean_absolute_error(y_true, y_pred),
         "mse": mse,
         "rmse": np.sqrt(mse),
         "r2_score": (
             r2_score(y_true, y_pred)
             if len(y_true) >= 2 else None
-        )
+        ),
     }
-
-    return results

@@ -1,0 +1,66 @@
+table,column,description,data_type,feature_type,missing_values,duplicate_rows_removed
+demand_history,sku_id,SKU identifier,object,categorical,0,0
+demand_history,week_start,Start date of demand week,object,date,0,0
+demand_history,week_number,Calendar week number supplied by source,int64,numerical,0,0
+demand_history,year,Calendar year,int64,numerical,0,0
+demand_history,month,Calendar month number,int64,numerical,0,0
+demand_history,demand_units,Observed demand quantity; candidate forecast target,int64,numerical,0,0
+demand_history,category,Product category,object,categorical,0,0
+demand_history,warehouse,Warehouse/location,object,categorical,0,0
+inventory,sku_id,SKU identifier,object,categorical,0,0
+inventory,sku_name,Product name,object,categorical,0,0
+inventory,category,Product category,object,categorical,0,0
+inventory,warehouse,Warehouse/location,object,categorical,0,0
+inventory,primary_supplier_id,Primary supplier identifier,object,categorical,0,0
+inventory,unit_cost,Unit acquisition cost,float64,numerical,0,0
+inventory,unit_price,Unit selling price,float64,numerical,0,0
+inventory,current_stock_qty,Current on-hand quantity,int64,numerical,0,0
+inventory,safety_stock_qty,Safety stock threshold,int64,numerical,0,0
+inventory,reorder_point_qty,Reorder threshold,int64,numerical,0,0
+inventory,max_stock_qty,Maximum stock target,int64,numerical,0,0
+inventory,avg_weekly_demand,Average weekly demand,float64,numerical,0,0
+inventory,lead_time_days,Lead time in days,int64,numerical,0,0
+inventory,is_active,Whether SKU is active,bool,boolean,0,0
+inventory,abc_class,ABC inventory classification,object,categorical,0,0
+inventory,days_of_stock,Estimated days of supply,float64,numerical,0,0
+purchase_orders,po_id,Purchase order identifier,object,categorical,0,0
+purchase_orders,supplier_id,Supplier identifier,object,categorical,0,0
+purchase_orders,sku_id,SKU identifier,object,categorical,0,0
+purchase_orders,warehouse,Destination warehouse,object,categorical,0,0
+purchase_orders,order_date,Date order placed,object,date,0,0
+purchase_orders,promised_delivery_date,Promised arrival date,object,date,0,0
+purchase_orders,actual_delivery_date,Actual arrival date,object,date,0,0
+purchase_orders,quantity_ordered,Quantity ordered,int64,numerical,0,0
+purchase_orders,quantity_received,Quantity received,int64,numerical,0,0
+purchase_orders,unit_cost,Unit purchase cost,float64,numerical,0,0
+purchase_orders,total_cost,Total purchase order cost,float64,numerical,0,0
+purchase_orders,is_on_time,Whether actual delivery met promise; prediction label,bool,boolean,0,0
+purchase_orders,days_late,Nonnegative days beyond promise; prediction label,int64,numerical,0,0
+purchase_orders,po_status,Purchase order status,object,categorical,0,0
+purchase_orders,quality_accepted,Whether received goods passed quality acceptance; prediction label,bool,boolean,0,0
+shipments,shipment_id,Shipment identifier,object,categorical,0,0
+shipments,sku_id,SKU identifier,object,categorical,0,0
+shipments,warehouse_origin,Origin warehouse,object,categorical,0,0
+shipments,carrier,Carrier name,object,categorical,0,0
+shipments,ship_date,Shipment dispatch date,object,date,0,0
+shipments,promised_delivery_date,Promised arrival date,object,date,0,0
+shipments,actual_delivery_date,Actual arrival date,object,date,0,0
+shipments,quantity_shipped,Quantity shipped,int64,numerical,0,0
+shipments,weight_kg,Shipment weight in kilograms,float64,numerical,0,0
+shipments,shipping_cost,Shipment cost,float64,numerical,0,0
+shipments,is_on_time,Whether shipment met promise; prediction label,bool,boolean,0,0
+shipments,days_late,Nonnegative days beyond promise; prediction label,int64,numerical,0,0
+shipments,damage_reported,Whether damage was reported; prediction label/proxy signal,bool,boolean,0,0
+shipments,ship_month,Shipment month,object,categorical,0,0
+suppliers,supplier_id,Supplier identifier,object,categorical,0,0
+suppliers,supplier_name,Supplier name,object,categorical,0,0
+suppliers,country,Supplier country,object,categorical,0,0
+suppliers,category,Supplier category,object,categorical,0,0
+suppliers,on_time_delivery_rate,Supplier on-time rate in source profile,float64,numerical,0,0
+suppliers,quality_acceptance_rate,Supplier quality acceptance rate in source profile,float64,numerical,0,0
+suppliers,avg_lead_time_days,Average lead time in days,int64,numerical,0,0
+suppliers,lead_time_variability,Lead time variability metric (source-defined),float64,numerical,0,0
+suppliers,payment_terms_days,Payment terms in days,int64,numerical,0,0
+suppliers,is_preferred,Preferred supplier flag,bool,boolean,0,0
+suppliers,risk_tier,Supplier risk category,object,categorical,0,0
+suppliers,annual_spend,Annual supplier spend,float64,numerical,0,0

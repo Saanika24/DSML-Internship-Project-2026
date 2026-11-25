@@ -1,11 +1,3 @@
-
-"""Feature engineering for supply-chain delivery predictions.
-
-Creates order-time features and leakage-safe supplier history features.
-"""
-
-from typing import Tuple
-
 import pandas as pd
 
 
@@ -15,13 +7,14 @@ REQUIRED_COLUMNS = [
     "warehouse",
     "order_date",
     "promised_delivery_date",
+    "actual_delivery_date",
     "quantity_ordered",
     "unit_cost",
     "is_on_time",
     "days_late",
 ]
 
-# Only features that can be known when the purchase order is placed.
+# Features strictly available at the time a purchase order is placed
 MODEL_FEATURE_COLUMNS = [
     "supplier_id",
     "sku_id",
@@ -40,246 +33,126 @@ MODEL_FEATURE_COLUMNS = [
 ]
 
 
-def validate_prediction_columns(data: pd.DataFrame) -> None:
-    """Check that the purchase-order dataset has required columns."""
-
-    if not isinstance(data, pd.DataFrame):
+def validate_prediction_columns(df: pd.DataFrame) -> None:
+    if not isinstance(df, pd.DataFrame):
         raise TypeError("Input must be a pandas DataFrame.")
 
-    missing = [
-        column for column in REQUIRED_COLUMNS
-        if column not in data.columns
-    ]
-
+    missing = [col for col in REQUIRED_COLUMNS if col not in df.columns]
     if missing:
-        raise ValueError(
-            f"Missing required prediction columns: {missing}"
-        )
+        raise ValueError(f"Missing required prediction columns: {missing}")
 
-    if data.empty:
+    if df.empty:
         raise ValueError("Purchase-order dataset is empty.")
 
 
-def build_purchase_order_features(
-    data: pd.DataFrame,
-) -> pd.DataFrame:
-    """Create prediction features without using future information.
+def build_purchase_order_features(df: pd.DataFrame) -> pd.DataFrame:
+    validate_prediction_columns(df)
+    out = df.copy().reset_index(drop=True)
 
-    Supplier historical metrics are calculated using strictly earlier
-    order dates. Orders from the same supplier on the same date do not
-    use each other's delivery outcomes.
+    # Parse core dates
+    out["order_date"] = pd.to_datetime(out["order_date"], errors="coerce")
+    out["promised_delivery_date"] = pd.to_datetime(out["promised_delivery_date"], errors="coerce")
 
-    Actual delivery dates and final delivery outcomes are retained
-    only as source/target information, never as model input features.
-    """
-
-    validate_prediction_columns(data)
-
-    result = data.copy().reset_index(drop=True)
-
-    # Convert date columns into a consistent format.
-    result["order_date"] = pd.to_datetime(
-        result["order_date"], errors="coerce"
-    )
-    result["promised_delivery_date"] = pd.to_datetime(
-        result["promised_delivery_date"], errors="coerce"
-    )
-
-    if result["order_date"].isna().any():
+    if out["order_date"].isna().any():
         raise ValueError("Invalid or missing order_date values found.")
 
-    if result["promised_delivery_date"].isna().any():
-        raise ValueError(
-            "Invalid or missing promised_delivery_date values found."
-        )
+    if out["promised_delivery_date"].isna().any():
+        raise ValueError("Invalid or missing promised_delivery_date values found.")
 
-    if result["supplier_id"].isna().any():
+    # Missing actual_delivery_date is allowed for open orders, but malformed strings should fail
+    raw_actual = out["actual_delivery_date"]
+    out["actual_delivery_date"] = pd.to_datetime(raw_actual, errors="coerce")
+
+    invalid_actual = (
+        raw_actual.notna()
+        & raw_actual.astype(str).str.strip().ne("")
+        & out["actual_delivery_date"].isna()
+    )
+    if invalid_actual.any():
+        raise ValueError("Invalid actual_delivery_date values found.")
+
+    if out["supplier_id"].isna().any():
         raise ValueError("Missing supplier_id values found.")
 
-    # Validate numerical fields.
-    for column in ["quantity_ordered", "unit_cost", "days_late"]:
-        result[column] = pd.to_numeric(
-            result[column], errors="coerce"
-        )
+    # Validate numeric fields and target consistency
+    for col in ["quantity_ordered", "unit_cost", "days_late"]:
+        out[col] = pd.to_numeric(out[col], errors="coerce")
+        if out[col].isna().any():
+            raise ValueError(f"Invalid or missing values in {col}.")
 
-        if result[column].isna().any():
-            raise ValueError(
-                f"Invalid or missing values in {column}."
-            )
-
-    result["is_on_time"] = pd.to_numeric(
-        result["is_on_time"], errors="coerce"
-    )
-
-    if result["is_on_time"].isna().any():
+    out["is_on_time"] = pd.to_numeric(out["is_on_time"], errors="coerce")
+    if out["is_on_time"].isna().any():
         raise ValueError("Invalid or missing is_on_time values.")
 
-    if not result["is_on_time"].isin([0, 1]).all():
+    if not out["is_on_time"].isin([0, 1]).all():
         raise ValueError("is_on_time must contain only 0 and 1.")
 
-    if (result["days_late"] < 0).any():
+    if (out["days_late"] < 0).any():
         raise ValueError("days_late cannot contain negative values.")
 
-    # Check whether the two target columns agree.
-    expected_on_time = (result["days_late"] == 0).astype(int)
+    expected_on_time = (out["days_late"] == 0).astype(int)
+    if not out["is_on_time"].eq(expected_on_time).all():
+        raise ValueError("is_on_time and days_late contain inconsistent labels.")
 
-    if not result["is_on_time"].eq(expected_on_time).all():
-        raise ValueError(
-            "is_on_time and days_late contain inconsistent labels."
-        )
+    # Order-time calendar & lead-time features
+    out["order_month"] = out["order_date"].dt.month
+    out["order_day_of_week"] = out["order_date"].dt.day_of_week
+    out["order_quarter"] = out["order_date"].dt.quarter
+    out["order_is_weekend"] = (out["order_date"].dt.day_of_week >= 5).astype(int)
 
-    # --------------------------------------------------
-    # 1. Calendar-based features
-    # --------------------------------------------------
+    out["planned_lead_time_days"] = (out["promised_delivery_date"] - out["order_date"]).dt.days
+    if (out["planned_lead_time_days"] < 0).any():
+        raise ValueError("Promised delivery date cannot precede order date.")
 
-    result["order_month"] = result["order_date"].dt.month
-    result["order_day_of_week"] = (
-        result["order_date"].dt.dayofweek
-    )
-    result["order_quarter"] = (
-        result["order_date"].dt.quarter
-    )
-    result["order_is_weekend"] = (
-        result["order_date"].dt.dayofweek >= 5
-    ).astype(int)
-
-    # Planned lead time is known at order placement.
-    result["planned_lead_time_days"] = (
-        result["promised_delivery_date"] - result["order_date"]
-    ).dt.days
-
-    if (result["planned_lead_time_days"] < 0).any():
-        raise ValueError(
-            "Promised delivery date cannot precede order date."
-        )
-
-    # --------------------------------------------------
-    # 2. Leakage-safe supplier history
-    # --------------------------------------------------
-
-    result["_order_day"] = result["order_date"].dt.normalize()
-
-    daily_history = (
-        result.groupby(
-            ["supplier_id", "_order_day"],
-            as_index=False,
-            sort=False,
-        )
-        .agg(
-            daily_order_count=("supplier_id", "size"),
-            daily_on_time_count=("is_on_time", "sum"),
-            daily_days_late_sum=("days_late", "sum"),
-            daily_late_order_count=(
-                "days_late",
-                lambda values: (values > 0).sum(),
-            ),
-        )
-        .sort_values(["supplier_id", "_order_day"])
-        .reset_index(drop=True)
-    )
-
-    history_columns = [
-        "daily_order_count",
-        "daily_on_time_count",
-        "daily_days_late_sum",
-        "daily_late_order_count",
+    # Point-in-time supplier history: only count orders placed AND delivered strictly
+    # before the current order date to avoid leakage and same-day ambiguity.
+    history_cols = [
+        "supplier_prior_order_count",
+        "supplier_prior_on_time_rate",
+        "supplier_prior_mean_days_late",
+        "supplier_prior_late_order_count",
     ]
+    for col in history_cols:
+        out[col] = 0.0
 
-    # Cumulative totals minus current-day totals ensure that
-    # only strictly earlier supplier orders are considered.
-    for column in history_columns:
-        daily_history[f"prior_{column}"] = (
-            daily_history.groupby("supplier_id")[column].cumsum()
-            - daily_history[column]
-        )
+    for _, group in out.groupby("supplier_id", sort=False):
+        order_dates = group["order_date"]
+        delivery_dates = group["actual_delivery_date"]
 
-    daily_history["supplier_prior_order_count"] = (
-        daily_history["prior_daily_order_count"]
-    )
+        for idx, row in group.iterrows():
+            curr_date = row["order_date"]
+            prior_mask = (
+                (order_dates < curr_date)
+                & (delivery_dates < curr_date)
+                & delivery_dates.notna()
+            )
+            prior_orders = group.loc[prior_mask]
 
-    prior_count = daily_history[
-        "supplier_prior_order_count"
-    ].replace(0, pd.NA)
+            if prior_orders.empty:
+                continue
 
-    daily_history["supplier_prior_on_time_rate"] = (
-        daily_history["prior_daily_on_time_count"] / prior_count
-    ).fillna(0.0)
+            out.at[idx, "supplier_prior_order_count"] = len(prior_orders)
+            out.at[idx, "supplier_prior_on_time_rate"] = prior_orders["is_on_time"].mean()
+            out.at[idx, "supplier_prior_mean_days_late"] = prior_orders["days_late"].mean()
+            out.at[idx, "supplier_prior_late_order_count"] = (prior_orders["days_late"] > 0).sum()
 
-    daily_history["supplier_prior_mean_days_late"] = (
-        daily_history["prior_daily_days_late_sum"] / prior_count
-    ).fillna(0.0)
+    # Targets
+    out["is_delayed"] = (out["days_late"] > 0).astype(int)
+    out["delay_days"] = out["days_late"]
 
-    daily_history["supplier_prior_late_order_count"] = (
-        daily_history["prior_daily_late_order_count"]
-    )
-
-    # Merge the historical metrics back into the original rows.
-    history_features = daily_history[
-        [
-            "supplier_id",
-            "_order_day",
-            "supplier_prior_order_count",
-            "supplier_prior_on_time_rate",
-            "supplier_prior_mean_days_late",
-            "supplier_prior_late_order_count",
-        ]
-    ]
-
-    result = result.merge(
-        history_features,
-        on=["supplier_id", "_order_day"],
-        how="left",
-        validate="many_to_one",
-        sort=False,
-    )
-
-    result = result.drop(columns=["_order_day"])
-
-    # --------------------------------------------------
-    # 3. Prediction targets
-    # --------------------------------------------------
-
-    result["is_delayed"] = (
-        result["days_late"] > 0
-    ).astype(int)
-
-    result["delay_days"] = result["days_late"]
-
-    return result
+    return out
 
 
-def prepare_prediction_inputs(
-    engineered_data: pd.DataFrame,
-) -> Tuple[pd.DataFrame, pd.Series, pd.Series]:
-    """Separate safe model features from prediction targets.
-
-    Returns:
-        X: Model input features.
-        y_classification: Delayed/on-time target.
-        y_regression: Number of delay days.
-    """
-
-    missing = [
-        column for column in MODEL_FEATURE_COLUMNS
-        if column not in engineered_data.columns
-    ]
-
+def prepare_prediction_inputs(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series, pd.Series]:
+    missing = [col for col in MODEL_FEATURE_COLUMNS if col not in df.columns]
     if missing:
-        raise ValueError(
-            f"Missing engineered features: {missing}"
-        )
+        raise ValueError(f"Missing engineered features: {missing}")
 
-    required_targets = ["is_delayed", "delay_days"]
-
-    if not all(
-        column in engineered_data.columns
-        for column in required_targets
-    ):
+    if not {"is_delayed", "delay_days"}.issubset(df.columns):
         raise ValueError("Prediction target columns are missing.")
 
-    X = engineered_data[MODEL_FEATURE_COLUMNS].copy()
+    X = df[MODEL_FEATURE_COLUMNS].copy()
+    y_clf = df["is_delayed"].copy()
+    y_reg = df["delay_days"].copy()
 
-    y_classification = engineered_data["is_delayed"].copy()
-    y_regression = engineered_data["delay_days"].copy()
-
-    return X, y_classification, y_regression
+    return X, y_clf, y_reg

@@ -1,3 +1,11 @@
 ﻿__pycache__/
 *.py[cod]
 .pytest_cache/
+
+# Generated model artifacts
+/models/
+/models_supplier_history_experiment/
+
+# Local datasets
+/data/raw/
+/data/temp_dataset/

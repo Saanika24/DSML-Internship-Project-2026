@@ -1,0 +1,1 @@
+event_id,event_type,affected_entity_type,affected_entity_id,location,start_date,end_date,duration_days,severity,source,is_synthetic_example

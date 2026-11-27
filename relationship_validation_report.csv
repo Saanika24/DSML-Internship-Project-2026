@@ -1,0 +1,14 @@
+metric,value
+supplier_count,80
+sku_count,500
+warehouse_name_count_union,5
+supplier_sku_warehouse_relationship_count,12813
+purchase_order_relationship_count,12456
+inventory_primary_supplier_relationship_count,500
+supplier_ids_in_po_not_in_supplier_table,0
+primary_supplier_ids_not_in_supplier_table,0
+po_sku_ids_not_in_inventory,0
+shipment_sku_ids_not_in_inventory,0
+po_warehouse_names_not_in_inventory,0
+po_shipment_common_transaction_id_columns,0
+po_ids_matching_shipment_ids,0

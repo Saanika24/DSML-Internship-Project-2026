@@ -1,0 +1,15 @@
+source_id,target_id,relationship_type,dependency_score,material,is_backup,data_source
+S001,F001,supplies,0.60,steel,false,synthetic_sample
+S002,F001,supplies,0.30,electronics,false,synthetic_sample
+S004,F001,supplies,0.50,steel,true,synthetic_sample
+S003,F002,supplies,0.50,plastics,false,synthetic_sample
+S002,F002,supplies,0.40,electronics,false,synthetic_sample
+S005,F002,supplies,0.10,chemicals,false,synthetic_sample
+S004,F003,supplies,0.70,metals,false,synthetic_sample
+S006,F003,supplies,0.30,components,false,synthetic_sample
+F001,W001,ships_to,0.60,finished_goods,false,synthetic_sample
+F001,W002,ships_to,0.40,finished_goods,false,synthetic_sample
+F002,W002,ships_to,0.60,finished_goods,false,synthetic_sample
+F002,W003,ships_to,0.50,finished_goods,false,synthetic_sample
+F003,W001,ships_to,0.40,finished_goods,false,synthetic_sample
+F003,W003,ships_to,0.50,finished_goods,false,synthetic_sample

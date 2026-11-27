@@ -1,0 +1,501 @@
+sku_id,sku_name,category,warehouse,primary_supplier_id,unit_cost,unit_price,current_stock_qty,safety_stock_qty,reorder_point_qty,max_stock_qty,avg_weekly_demand,lead_time_days,is_active,abc_class,days_of_stock
+SKU-0001,Chemicals Item 0001,Chemicals,Toronto-Central,SUP-029,255.32,890.01,354,24,194,493,21.25,8,True,C,116.6
+SKU-0002,Chemicals Item 0002,Chemicals,Vancouver-West,SUP-036,56.31,128.19,3108,193,1248,5529,36.39,29,True,C,597.8
+SKU-0003,Mechanical Parts Item 0003,Mechanical Parts,Toronto-Central,SUP-067,82.73,284.63,641,118,803,3825,20.76,33,True,C,216.2
+SKU-0004,Consumables Item 0004,Consumables,Edmonton-North,SUP-037,202.78,430.62,1548,95,816,1789,21.2,34,True,B,511.0
+SKU-0005,Packaging Item 0005,Packaging,Calgary-Main,SUP-047,19.49,53.42,221,20,74,265,17.94,3,True,A,86.2
+SKU-0006,Chemicals Item 0006,Chemicals,Calgary-Main,SUP-049,3.44,9.65,5383,640,2105,5263,81.39,18,True,C,463.0
+SKU-0007,Assemblies Item 0007,Assemblies,Calgary-Main,SUP-018,97.8,141.48,30,42,178,627,16.98,8,True,A,12.4
+SKU-0008,Packaging Item 0008,Packaging,Vancouver-West,SUP-079,82.34,283.62,348,38,172,565,8.4,16,True,C,289.9
+SKU-0009,Mechanical Parts Item 0009,Mechanical Parts,Montreal-East,SUP-010,60.61,151.11,1970,189,954,4561,28.35,27,True,B,486.5
+SKU-0010,Raw Materials Item 0010,Raw Materials,Vancouver-West,SUP-005,3.17,11.03,651,1028,3250,14748,52.89,42,True,B,86.2
+SKU-0011,Consumables Item 0011,Consumables,Edmonton-North,SUP-067,2.44,8.3,10508,1011,3642,15412,71.11,37,True,C,1034.3
+SKU-0012,Assemblies Item 0012,Assemblies,Edmonton-North,SUP-056,0.51,1.03,557,61,222,899,9.48,17,True,B,411.3
+SKU-0013,Mechanical Parts Item 0013,Mechanical Parts,Vancouver-West,SUP-061,1.92,3.28,942,102,362,1011,13.01,20,True,C,506.7
+SKU-0014,Electronics Item 0014,Electronics,Calgary-Main,SUP-060,6.01,12.07,190,63,351,1620,9.6,30,True,C,138.5
+SKU-0015,Electronics Item 0015,Electronics,Vancouver-West,SUP-076,6.27,9.55,31,93,633,1943,15.87,34,True,B,13.7
+SKU-0016,Mechanical Parts Item 0016,Mechanical Parts,Montreal-East,SUP-050,120.56,272.61,453,101,1045,3390,26.23,36,True,C,120.9
+SKU-0017,Assemblies Item 0017,Assemblies,Edmonton-North,SUP-013,26.04,63.03,2196,406,1251,2799,19.2,44,False,C,800.8
+SKU-0018,Assemblies Item 0018,Assemblies,Edmonton-North,SUP-075,21.95,60.29,1258,261,849,3013,19.62,30,False,A,448.9
+SKU-0019,Mechanical Parts Item 0019,Mechanical Parts,Edmonton-North,SUP-038,3.66,4.83,58,51,168,802,3.24,36,True,B,125.3
+SKU-0020,Assemblies Item 0020,Assemblies,Calgary-Main,SUP-050,29.94,50.97,2221,206,909,3130,15.97,44,True,C,973.5
+SKU-0021,Mechanical Parts Item 0021,Mechanical Parts,Toronto-Central,SUP-044,13.91,33.85,65,14,110,293,12.03,8,False,C,37.8
+SKU-0022,Raw Materials Item 0022,Raw Materials,Montreal-East,SUP-043,27.29,62.31,1671,238,1301,6439,46.22,23,True,B,253.1
+SKU-0023,Assemblies Item 0023,Assemblies,Calgary-Main,SUP-031,73.84,153.58,830,100,313,946,11.83,18,True,A,491.2
+SKU-0024,Chemicals Item 0024,Chemicals,Toronto-Central,SUP-036,1.57,4.01,902,133,935,4554,22.28,36,True,A,283.3
+SKU-0025,Mechanical Parts Item 0025,Mechanical Parts,Vancouver-West,SUP-073,20.66,33.86,1266,148,971,3260,28.37,29,True,B,312.3
+SKU-0026,Mechanical Parts Item 0026,Mechanical Parts,Vancouver-West,SUP-065,17.36,41.61,1207,90,590,2367,13.15,38,True,C,642.6
+SKU-0027,Mechanical Parts Item 0027,Mechanical Parts,Edmonton-North,SUP-071,3.45,11.96,66,25,85,241,9.92,6,True,C,46.6
+SKU-0028,Consumables Item 0028,Consumables,Montreal-East,SUP-055,387.99,992.68,1463,369,1304,3924,33.39,28,True,C,306.7
+SKU-0029,Mechanical Parts Item 0029,Mechanical Parts,Edmonton-North,SUP-017,31.66,96.21,1111,229,723,3490,19.76,25,True,B,393.7
+SKU-0030,Consumables Item 0030,Consumables,Vancouver-West,SUP-030,13.65,46.35,1310,80,594,2035,21.4,24,True,B,428.4
+SKU-0031,Electronics Item 0031,Electronics,Calgary-Main,SUP-079,75.41,157.3,2705,304,1777,5019,42.08,35,True,A,450.0
+SKU-0032,Packaging Item 0032,Packaging,Toronto-Central,SUP-068,1.87,4.61,370,153,734,1479,14.17,41,True,A,182.8
+SKU-0033,Electronics Item 0033,Electronics,Edmonton-North,SUP-061,2.66,8.91,151,39,174,558,10.39,13,True,B,101.7
+SKU-0034,Raw Materials Item 0034,Raw Materials,Toronto-Central,SUP-047,37.54,75.4,1835,231,1313,5744,63.62,17,True,B,201.9
+SKU-0035,Raw Materials Item 0035,Raw Materials,Toronto-Central,SUP-038,3.36,11.37,2187,115,754,3510,22.81,28,True,C,671.1
+SKU-0036,Consumables Item 0036,Consumables,Toronto-Central,SUP-075,94.91,169.64,47,194,1366,3565,34.47,34,True,B,9.5
+SKU-0037,Chemicals Item 0037,Chemicals,Vancouver-West,SUP-005,6.34,16.85,1906,200,987,4564,49.2,16,True,B,271.2
+SKU-0038,Mechanical Parts Item 0038,Mechanical Parts,Toronto-Central,SUP-050,65.12,118.68,1303,377,2037,4560,50.31,33,True,C,181.3
+SKU-0039,Consumables Item 0039,Consumables,Montreal-East,SUP-047,156.06,363.89,136,63,248,1237,5.29,35,True,C,180.1
+SKU-0040,Packaging Item 0040,Packaging,Edmonton-North,SUP-047,122.64,362.17,1995,115,991,3823,51.5,17,True,B,271.1
+SKU-0041,Electronics Item 0041,Electronics,Montreal-East,SUP-065,22.97,60.23,5090,583,2759,10793,114.55,19,True,C,311.1
+SKU-0042,Raw Materials Item 0042,Raw Materials,Edmonton-North,SUP-026,11.01,17.56,245,40,252,840,15.12,14,True,A,113.4
+SKU-0043,Packaging Item 0043,Packaging,Vancouver-West,SUP-060,62.08,138.06,1285,291,1088,2516,24.14,33,True,C,372.6
+SKU-0044,Chemicals Item 0044,Chemicals,Edmonton-North,SUP-001,13.58,37.79,193,12,79,376,22.43,3,True,C,60.2
+SKU-0045,Consumables Item 0045,Consumables,Toronto-Central,SUP-015,68.22,125.83,1575,217,779,3268,51.13,11,True,C,215.6
+SKU-0046,Electronics Item 0046,Electronics,Calgary-Main,SUP-037,68.11,178.5,451,96,952,3705,21.94,39,True,C,143.9
+SKU-0047,Consumables Item 0047,Consumables,Toronto-Central,SUP-011,3.53,10.95,1079,132,406,1736,27.37,10,True,C,275.9
+SKU-0048,Packaging Item 0048,Packaging,Montreal-East,SUP-027,19.08,33.02,393,60,393,1126,23.79,14,False,C,115.7
+SKU-0049,Chemicals Item 0049,Chemicals,Vancouver-West,SUP-030,6.03,19.71,1083,234,744,3431,28.31,18,True,C,267.8
+SKU-0050,Consumables Item 0050,Consumables,Vancouver-West,SUP-066,3.2,8.48,1100,136,533,1137,13.25,30,True,A,581.3
+SKU-0051,Packaging Item 0051,Packaging,Montreal-East,SUP-038,3.29,7.56,292,102,503,2190,16.02,25,False,C,127.6
+SKU-0052,Electronics Item 0052,Electronics,Montreal-East,SUP-028,3.07,4.35,201,40,119,531,26.47,3,True,C,53.2
+SKU-0053,Packaging Item 0053,Packaging,Vancouver-West,SUP-032,99.69,306.26,91,25,110,347,4.74,18,True,B,134.4
+SKU-0054,Consumables Item 0054,Consumables,Vancouver-West,SUP-041,6.39,12.51,77,26,268,989,13.45,18,True,C,40.1
+SKU-0055,Raw Materials Item 0055,Raw Materials,Edmonton-North,SUP-006,22.18,77.23,4387,685,2447,10154,55.05,32,True,C,557.8
+SKU-0056,Chemicals Item 0056,Chemicals,Montreal-East,SUP-069,40.09,105.57,2869,294,1297,5721,25.08,40,True,C,800.6
+SKU-0057,Raw Materials Item 0057,Raw Materials,Vancouver-West,SUP-045,41.92,75.45,4463,177,1685,3434,58.0,26,True,C,538.6
+SKU-0058,Mechanical Parts Item 0058,Mechanical Parts,Vancouver-West,SUP-007,2.31,7.19,11,8,58,272,12.47,4,True,C,6.2
+SKU-0059,Electronics Item 0059,Electronics,Vancouver-West,SUP-080,12.14,19.07,5133,759,2479,6642,101.18,17,True,B,355.1
+SKU-0060,Assemblies Item 0060,Assemblies,Edmonton-North,SUP-041,3.76,12.77,1009,564,1794,5474,28.6,43,True,B,247.0
+SKU-0061,Mechanical Parts Item 0061,Mechanical Parts,Toronto-Central,SUP-037,0.84,2.57,359,117,365,1050,13.78,18,True,B,182.3
+SKU-0062,Chemicals Item 0062,Chemicals,Edmonton-North,SUP-007,23.05,34.63,2151,362,2007,5628,39.16,42,True,A,384.5
+SKU-0063,Electronics Item 0063,Electronics,Vancouver-West,SUP-062,164.4,342.46,1472,350,1540,7003,39.65,30,True,C,259.9
+SKU-0064,Packaging Item 0064,Packaging,Toronto-Central,SUP-007,13.95,47.58,5006,766,2733,9907,54.64,36,False,A,641.4
+SKU-0065,Mechanical Parts Item 0065,Mechanical Parts,Edmonton-North,SUP-018,7.03,24.28,346,40,128,580,3.81,23,True,C,635.7
+SKU-0066,Raw Materials Item 0066,Raw Materials,Toronto-Central,SUP-002,32.96,84.09,1908,287,986,3658,30.39,23,True,C,439.6
+SKU-0067,Raw Materials Item 0067,Raw Materials,Edmonton-North,SUP-054,15.71,26.63,68,177,533,1518,20.91,17,True,C,22.8
+SKU-0068,Electronics Item 0068,Electronics,Montreal-East,SUP-044,30.77,40.32,575,84,286,882,10.1,20,True,B,398.7
+SKU-0069,Packaging Item 0069,Packaging,Calgary-Main,SUP-042,5.09,14.67,1158,181,1602,4020,40.61,35,True,C,199.6
+SKU-0070,Consumables Item 0070,Consumables,Montreal-East,SUP-077,87.11,216.94,283,44,237,669,21.41,9,True,C,92.5
+SKU-0071,Packaging Item 0071,Packaging,Edmonton-North,SUP-057,3.29,5.65,111,35,107,472,2.34,31,True,A,332.4
+SKU-0072,Mechanical Parts Item 0072,Mechanical Parts,Montreal-East,SUP-015,15.45,41.81,222,14,94,389,4.7,17,True,C,330.6
+SKU-0073,Consumables Item 0073,Consumables,Toronto-Central,SUP-053,16.59,51.81,350,53,292,805,79.55,3,True,C,30.8
+SKU-0074,Packaging Item 0074,Packaging,Toronto-Central,SUP-064,6.86,19.39,2229,334,1129,5032,18.92,42,True,C,824.7
+SKU-0075,Consumables Item 0075,Consumables,Calgary-Main,SUP-029,26.3,71.39,444,44,151,483,8.26,13,True,A,376.4
+SKU-0076,Assemblies Item 0076,Assemblies,Montreal-East,SUP-058,64.24,209.12,507,51,186,721,4.51,30,True,A,787.7
+SKU-0077,Assemblies Item 0077,Assemblies,Vancouver-West,SUP-010,6.46,22.58,18241,1043,6751,33323,158.56,36,True,B,805.3
+SKU-0078,Assemblies Item 0078,Assemblies,Vancouver-West,SUP-015,7.02,9.58,497,64,274,1299,8.09,26,True,C,430.0
+SKU-0079,Consumables Item 0079,Consumables,Vancouver-West,SUP-069,18.07,44.9,188,19,93,299,3.88,19,False,B,339.0
+SKU-0080,Electronics Item 0080,Electronics,Toronto-Central,SUP-042,6.24,17.51,66,13,56,252,4.82,9,True,B,95.8
+SKU-0081,Chemicals Item 0081,Chemicals,Toronto-Central,SUP-076,19.34,65.93,951,227,689,2473,30.79,15,True,C,216.2
+SKU-0082,Assemblies Item 0082,Assemblies,Toronto-Central,SUP-036,338.1,766.28,145,77,317,1229,26.7,9,True,B,38.0
+SKU-0083,Consumables Item 0083,Consumables,Montreal-East,SUP-049,20.1,48.39,1197,166,528,2453,24.13,15,True,A,347.2
+SKU-0084,Consumables Item 0084,Consumables,Calgary-Main,SUP-033,5.39,15.5,22,8,35,154,1.51,18,True,C,101.9
+SKU-0085,Electronics Item 0085,Electronics,Montreal-East,SUP-032,36.8,57.93,7043,520,2804,13515,63.45,36,True,A,777.0
+SKU-0086,Consumables Item 0086,Consumables,Edmonton-North,SUP-055,45.63,138.69,704,83,296,988,13.29,16,True,B,370.8
+SKU-0087,Assemblies Item 0087,Assemblies,Edmonton-North,SUP-020,95.49,129.54,8912,3033,10833,29085,190.25,41,True,B,327.9
+SKU-0088,Electronics Item 0088,Electronics,Vancouver-West,SUP-002,4.33,8.0,808,422,1674,6205,39.13,32,True,A,144.5
+SKU-0089,Electronics Item 0089,Electronics,Vancouver-West,SUP-014,180.18,490.98,184,56,235,827,8.15,22,True,C,158.0
+SKU-0090,Mechanical Parts Item 0090,Mechanical Parts,Edmonton-North,SUP-030,29.05,70.95,72,14,50,183,7.25,5,True,C,69.5
+SKU-0091,Chemicals Item 0091,Chemicals,Calgary-Main,SUP-036,30.91,75.21,8696,704,3748,11114,169.09,18,True,B,360.0
+SKU-0092,Mechanical Parts Item 0092,Mechanical Parts,Vancouver-West,SUP-006,21.81,73.71,927,149,514,1205,16.6,22,True,B,390.8
+SKU-0093,Assemblies Item 0093,Assemblies,Calgary-Main,SUP-046,7.07,10.11,178,80,604,1782,26.22,20,True,B,47.5
+SKU-0094,Chemicals Item 0094,Chemicals,Montreal-East,SUP-048,2.24,6.7,809,40,367,1025,13.64,24,True,C,415.3
+SKU-0095,Mechanical Parts Item 0095,Mechanical Parts,Vancouver-West,SUP-014,3.06,8.61,2326,248,1045,2142,30.64,26,True,C,531.4
+SKU-0096,Raw Materials Item 0096,Raw Materials,Montreal-East,SUP-002,139.22,305.3,622,210,868,1937,18.8,35,True,C,231.6
+SKU-0097,Chemicals Item 0097,Chemicals,Toronto-Central,SUP-069,91.77,292.31,453,139,965,2811,27.52,30,True,A,115.2
+SKU-0098,Packaging Item 0098,Packaging,Edmonton-North,SUP-080,55.6,181.45,1403,86,493,1666,23.96,17,True,C,409.9
+SKU-0099,Assemblies Item 0099,Assemblies,Edmonton-North,SUP-005,7.39,19.04,726,40,244,911,5.1,40,True,C,996.4
+SKU-0100,Assemblies Item 0100,Assemblies,Vancouver-West,SUP-046,31.68,67.56,473,317,2033,7833,47.66,36,True,C,69.5
+SKU-0101,Chemicals Item 0101,Chemicals,Toronto-Central,SUP-001,9.53,26.82,876,146,444,1490,11.04,27,True,B,555.4
+SKU-0102,Mechanical Parts Item 0102,Mechanical Parts,Toronto-Central,SUP-047,45.28,85.81,1443,171,569,1707,10.75,37,True,C,940.0
+SKU-0103,Electronics Item 0103,Electronics,Edmonton-North,SUP-019,34.46,92.89,1003,57,424,1818,14.11,26,True,A,497.6
+SKU-0104,Raw Materials Item 0104,Raw Materials,Montreal-East,SUP-009,1.46,2.6,2485,333,1664,4533,63.38,21,True,C,274.5
+SKU-0105,Assemblies Item 0105,Assemblies,Toronto-Central,SUP-016,51.59,81.71,276,35,154,620,3.14,38,True,C,615.5
+SKU-0106,Electronics Item 0106,Electronics,Edmonton-North,SUP-011,143.99,449.39,1148,130,439,1419,22.09,14,True,B,363.7
+SKU-0107,Electronics Item 0107,Electronics,Edmonton-North,SUP-011,10.63,24.98,420,34,140,647,4.06,26,True,C,724.3
+SKU-0108,Consumables Item 0108,Consumables,Edmonton-North,SUP-060,111.8,351.54,210,17,94,284,3.86,20,True,B,380.7
+SKU-0109,Consumables Item 0109,Consumables,Edmonton-North,SUP-026,6.02,15.26,215,14,75,296,12.14,5,True,A,123.9
+SKU-0110,Packaging Item 0110,Packaging,Montreal-East,SUP-053,1.93,3.18,413,216,819,2270,30.16,20,True,C,95.8
+SKU-0111,Chemicals Item 0111,Chemicals,Toronto-Central,SUP-011,0.82,2.22,820,70,328,1265,32.22,8,True,C,178.1
+SKU-0112,Assemblies Item 0112,Assemblies,Toronto-Central,SUP-068,38.94,103.7,2920,694,2391,11893,43.52,39,True,B,469.7
+SKU-0113,Chemicals Item 0113,Chemicals,Edmonton-North,SUP-035,7.67,20.82,7725,600,2703,13256,51.29,41,True,B,1054.4
+SKU-0114,Mechanical Parts Item 0114,Mechanical Parts,Edmonton-North,SUP-047,13.97,33.26,338,466,1454,6984,26.0,38,True,B,91.0
+SKU-0115,Mechanical Parts Item 0115,Mechanical Parts,Calgary-Main,SUP-062,104.01,135.46,2009,126,1110,4357,41.0,24,True,C,343.0
+SKU-0116,Consumables Item 0116,Consumables,Vancouver-West,SUP-017,6.82,23.69,77,10,51,113,13.72,3,True,B,39.3
+SKU-0117,Packaging Item 0117,Packaging,Toronto-Central,SUP-031,68.45,104.81,811,120,378,803,17.18,15,True,C,330.3
+SKU-0118,Packaging Item 0118,Packaging,Toronto-Central,SUP-021,3.1,5.51,127,12,106,428,18.89,5,True,B,47.1
+SKU-0119,Packaging Item 0119,Packaging,Montreal-East,SUP-057,8.78,22.41,1306,200,601,2145,25.07,16,True,C,364.6
+SKU-0120,Consumables Item 0120,Consumables,Vancouver-West,SUP-016,5.13,14.87,683,164,505,1983,14.8,23,True,A,322.9
+SKU-0121,Chemicals Item 0121,Chemicals,Montreal-East,SUP-034,6.23,14.0,890,308,1012,4521,32.02,22,True,C,194.6
+SKU-0122,Mechanical Parts Item 0122,Mechanical Parts,Calgary-Main,SUP-042,527.63,1178.25,528,63,280,1326,21.72,10,True,B,170.2
+SKU-0123,Consumables Item 0123,Consumables,Calgary-Main,SUP-047,30.03,56.63,214,27,84,365,7.18,8,True,C,208.6
+SKU-0124,Raw Materials Item 0124,Raw Materials,Calgary-Main,SUP-064,2.06,5.38,994,112,581,1466,58.58,8,True,C,118.8
+SKU-0125,Chemicals Item 0125,Chemicals,Edmonton-North,SUP-025,5.22,15.15,511,52,263,740,13.18,16,True,C,271.4
+SKU-0126,Chemicals Item 0126,Chemicals,Toronto-Central,SUP-018,235.29,478.98,102,14,55,214,13.5,3,True,B,52.9
+SKU-0127,Electronics Item 0127,Electronics,Montreal-East,SUP-078,19.43,49.58,424,56,313,1513,25.68,10,True,C,115.6
+SKU-0128,Packaging Item 0128,Packaging,Montreal-East,SUP-060,15.73,43.24,232,117,743,2622,39.11,16,True,B,41.5
+SKU-0129,Chemicals Item 0129,Chemicals,Toronto-Central,SUP-053,169.4,312.85,152,72,338,791,66.5,4,True,A,16.0
+SKU-0130,Packaging Item 0130,Packaging,Montreal-East,SUP-042,94.89,243.18,311,110,683,1973,16.37,35,True,B,133.0
+SKU-0131,Raw Materials Item 0131,Raw Materials,Montreal-East,SUP-079,5.95,11.1,840,159,847,3886,22.19,31,True,C,265.0
+SKU-0132,Mechanical Parts Item 0132,Mechanical Parts,Edmonton-North,SUP-023,63.6,137.88,21,42,223,1029,6.72,27,True,C,21.9
+SKU-0133,Chemicals Item 0133,Chemicals,Calgary-Main,SUP-053,158.24,417.44,961,56,334,1465,11.57,24,True,C,581.6
+SKU-0134,Chemicals Item 0134,Chemicals,Montreal-East,SUP-059,22.85,38.33,233,25,156,626,3.74,35,True,B,436.2
+SKU-0135,Raw Materials Item 0135,Raw Materials,Vancouver-West,SUP-006,5.98,8.11,55,5,35,128,10.02,3,True,C,38.4
+SKU-0136,Consumables Item 0136,Consumables,Montreal-East,SUP-021,24.22,84.62,1963,284,956,2671,15.27,44,True,A,899.7
+SKU-0137,Raw Materials Item 0137,Raw Materials,Edmonton-North,SUP-030,9.24,16.74,222,38,148,330,3.56,31,True,C,436.6
+SKU-0138,Chemicals Item 0138,Chemicals,Toronto-Central,SUP-074,0.71,1.21,647,84,554,1697,13.82,34,True,B,327.8
+SKU-0139,Consumables Item 0139,Consumables,Vancouver-West,SUP-060,10.41,14.47,168,121,439,2112,10.61,30,True,C,110.8
+SKU-0140,Chemicals Item 0140,Chemicals,Toronto-Central,SUP-012,8.04,22.84,2762,197,937,2429,18.49,40,False,A,1045.6
+SKU-0141,Consumables Item 0141,Consumables,Vancouver-West,SUP-067,11.51,39.46,399,193,604,1640,51.39,8,False,C,54.4
+SKU-0142,Raw Materials Item 0142,Raw Materials,Montreal-East,SUP-003,11.88,26.38,1888,90,644,2723,25.18,22,True,B,524.8
+SKU-0143,Mechanical Parts Item 0143,Mechanical Parts,Edmonton-North,SUP-061,9.49,19.41,1387,185,579,2659,10.65,37,True,C,912.0
+SKU-0144,Consumables Item 0144,Consumables,Toronto-Central,SUP-037,1.15,2.53,1268,139,1078,3448,22.36,42,True,C,396.9
+SKU-0145,Packaging Item 0145,Packaging,Calgary-Main,SUP-066,28.55,69.54,2131,197,717,2090,14.85,35,True,A,1004.4
+SKU-0146,Mechanical Parts Item 0146,Mechanical Parts,Montreal-East,SUP-062,2.91,4.89,1618,239,823,2389,13.9,42,True,C,814.9
+SKU-0147,Packaging Item 0147,Packaging,Vancouver-West,SUP-039,11.57,21.4,212,152,695,3408,13.93,39,True,C,106.6
+SKU-0148,Chemicals Item 0148,Chemicals,Calgary-Main,SUP-044,0.35,1.14,851,231,771,1661,14.21,38,True,B,419.2
+SKU-0149,Mechanical Parts Item 0149,Mechanical Parts,Calgary-Main,SUP-025,6.58,17.37,1649,178,968,3350,28.22,28,True,B,409.1
+SKU-0150,Chemicals Item 0150,Chemicals,Calgary-Main,SUP-071,17.06,31.33,192,54,244,531,27.19,7,True,B,49.4
+SKU-0151,Chemicals Item 0151,Chemicals,Edmonton-North,SUP-064,41.89,81.08,3005,2786,9803,29910,206.38,34,True,A,101.9
+SKU-0152,Assemblies Item 0152,Assemblies,Edmonton-North,SUP-021,41.64,145.2,113,61,322,922,20.11,13,True,A,39.3
+SKU-0153,Electronics Item 0153,Electronics,Toronto-Central,SUP-033,97.76,158.99,2637,344,1102,4794,18.06,42,True,A,1022.2
+SKU-0154,Mechanical Parts Item 0154,Mechanical Parts,Vancouver-West,SUP-069,14.84,51.0,4341,647,1963,5537,33.74,39,True,C,900.6
+SKU-0155,Raw Materials Item 0155,Raw Materials,Vancouver-West,SUP-042,41.7,101.13,34,32,143,306,11.05,10,True,C,21.5
+SKU-0156,Packaging Item 0156,Packaging,Toronto-Central,SUP-024,189.2,498.17,176,70,232,761,4.5,36,True,C,273.6
+SKU-0157,Mechanical Parts Item 0157,Mechanical Parts,Toronto-Central,SUP-050,140.71,353.59,67,8,27,72,2.36,8,True,C,198.8
+SKU-0158,Electronics Item 0158,Electronics,Calgary-Main,SUP-066,125.61,311.43,116,17,65,177,6.89,7,True,C,117.9
+SKU-0159,Electronics Item 0159,Electronics,Vancouver-West,SUP-054,6.75,11.04,39,9,29,137,4.88,4,True,A,56.0
+SKU-0160,Mechanical Parts Item 0160,Mechanical Parts,Calgary-Main,SUP-027,70.96,208.91,23,22,174,695,8.03,19,False,A,20.1
+SKU-0161,Assemblies Item 0161,Assemblies,Montreal-East,SUP-014,404.02,1119.48,276,10,105,367,2.65,36,True,A,729.7
+SKU-0162,Mechanical Parts Item 0162,Mechanical Parts,Calgary-Main,SUP-027,35.83,48.62,692,188,679,3136,70.19,7,True,C,69.0
+SKU-0163,Assemblies Item 0163,Assemblies,Calgary-Main,SUP-024,69.41,109.33,398,136,638,2585,12.88,39,True,C,216.2
+SKU-0164,Electronics Item 0164,Electronics,Calgary-Main,SUP-044,14.85,35.56,80,88,414,1368,12.52,26,True,A,44.7
+SKU-0165,Consumables Item 0165,Consumables,Montreal-East,SUP-014,703.53,2363.5,4508,217,1705,6982,35.43,42,True,C,890.6
+SKU-0166,Mechanical Parts Item 0166,Mechanical Parts,Montreal-East,SUP-077,50.57,162.73,484,85,515,1824,11.31,38,True,B,299.6
+SKU-0167,Chemicals Item 0167,Chemicals,Edmonton-North,SUP-059,12.52,23.24,84,9,48,234,5.52,7,True,C,106.5
+SKU-0168,Packaging Item 0168,Packaging,Calgary-Main,SUP-026,78.21,182.93,174,308,929,2219,21.42,29,True,A,56.9
+SKU-0169,Raw Materials Item 0169,Raw Materials,Toronto-Central,SUP-046,78.1,133.69,6197,485,3308,10079,100.81,28,True,B,430.3
+SKU-0170,Assemblies Item 0170,Assemblies,Calgary-Main,SUP-036,17.45,60.59,101,19,186,463,6.98,24,True,A,101.3
+SKU-0171,Electronics Item 0171,Electronics,Toronto-Central,SUP-067,79.94,168.84,408,59,284,765,5.49,41,True,A,520.4
+SKU-0172,Raw Materials Item 0172,Raw Materials,Toronto-Central,SUP-041,1.02,3.24,2581,216,1065,4677,22.94,37,True,A,787.6
+SKU-0173,Chemicals Item 0173,Chemicals,Toronto-Central,SUP-026,7.19,10.85,161,6,54,184,3.41,14,True,C,330.5
+SKU-0174,Mechanical Parts Item 0174,Mechanical Parts,Vancouver-West,SUP-012,55.3,135.51,264,295,1194,2416,24.29,37,True,A,76.1
+SKU-0175,Consumables Item 0175,Consumables,Edmonton-North,SUP-016,67.18,192.58,302,30,157,480,42.31,3,True,C,50.0
+SKU-0176,Consumables Item 0176,Consumables,Montreal-East,SUP-029,6.37,9.57,560,95,304,1278,11.0,19,True,B,356.4
+SKU-0177,Raw Materials Item 0177,Raw Materials,Edmonton-North,SUP-068,14.31,19.77,282,42,145,719,12.92,8,True,C,152.8
+SKU-0178,Packaging Item 0178,Packaging,Vancouver-West,SUP-022,7.35,22.58,950,96,326,1616,6.97,33,True,C,953.9
+SKU-0179,Assemblies Item 0179,Assemblies,Edmonton-North,SUP-028,0.69,1.53,1424,180,1231,3575,23.89,44,True,C,417.2
+SKU-0180,Packaging Item 0180,Packaging,Edmonton-North,SUP-010,50.02,140.16,786,355,1630,6190,29.64,43,True,B,185.6
+SKU-0181,Mechanical Parts Item 0181,Mechanical Parts,Vancouver-West,SUP-004,7.54,11.03,447,196,644,2272,26.34,17,True,A,118.8
+SKU-0182,Electronics Item 0182,Electronics,Montreal-East,SUP-076,14.96,52.04,220,38,127,513,5.22,17,True,C,295.1
+SKU-0183,Mechanical Parts Item 0183,Mechanical Parts,Vancouver-West,SUP-064,0.45,0.64,3396,348,1407,4460,24.63,43,True,C,965.0
+SKU-0184,Consumables Item 0184,Consumables,Edmonton-North,SUP-054,418.51,1428.32,2556,734,2318,9897,87.98,18,True,C,203.4
+SKU-0185,Electronics Item 0185,Electronics,Vancouver-West,SUP-008,2076.21,5138.75,588,317,1468,4248,38.37,30,True,B,107.3
+SKU-0186,Mechanical Parts Item 0186,Mechanical Parts,Toronto-Central,SUP-041,132.55,285.37,1226,99,441,1954,8.77,39,True,B,978.4
+SKU-0187,Chemicals Item 0187,Chemicals,Calgary-Main,SUP-028,540.24,761.0,2341,230,830,3224,15.39,39,True,B,1065.0
+SKU-0188,Chemicals Item 0188,Chemicals,Calgary-Main,SUP-030,97.02,168.41,4065,403,1986,8033,51.07,31,True,C,557.2
+SKU-0189,Chemicals Item 0189,Chemicals,Toronto-Central,SUP-031,42.61,60.29,67,11,39,147,3.94,7,True,C,119.0
+SKU-0190,Raw Materials Item 0190,Raw Materials,Montreal-East,SUP-062,48.78,135.35,1049,80,728,2590,20.26,32,True,A,362.5
+SKU-0191,Assemblies Item 0191,Assemblies,Montreal-East,SUP-023,57.51,137.57,1594,152,540,1325,11.09,35,True,C,1006.2
+SKU-0192,Raw Materials Item 0192,Raw Materials,Montreal-East,SUP-007,8.52,19.83,6447,923,4039,12345,81.99,38,True,C,550.4
+SKU-0193,Assemblies Item 0193,Assemblies,Toronto-Central,SUP-005,860.82,1633.89,78,15,57,127,5.2,8,True,C,104.9
+SKU-0194,Consumables Item 0194,Consumables,Vancouver-West,SUP-053,71.25,237.71,2647,378,1623,4179,46.13,27,True,C,401.7
+SKU-0195,Packaging Item 0195,Packaging,Calgary-Main,SUP-051,35.75,62.82,1277,275,1178,5683,25.09,36,True,C,356.3
+SKU-0196,Electronics Item 0196,Electronics,Vancouver-West,SUP-023,298.3,992.18,463,82,304,1465,9.67,23,True,C,335.3
+SKU-0197,Assemblies Item 0197,Assemblies,Vancouver-West,SUP-073,186.21,419.99,728,138,771,3444,21.1,30,True,C,241.5
+SKU-0198,Assemblies Item 0198,Assemblies,Montreal-East,SUP-017,21.83,73.85,1807,407,1323,6092,39.82,23,True,A,317.7
+SKU-0199,Consumables Item 0199,Consumables,Montreal-East,SUP-013,30.01,75.73,651,172,602,2619,21.5,20,True,B,211.9
+SKU-0200,Chemicals Item 0200,Chemicals,Toronto-Central,SUP-048,30.24,76.01,68,36,191,704,22.18,7,True,B,21.5
+SKU-0201,Mechanical Parts Item 0201,Mechanical Parts,Toronto-Central,SUP-003,14.36,44.66,10646,1648,6288,26008,105.45,44,True,C,706.7
+SKU-0202,Consumables Item 0202,Consumables,Toronto-Central,SUP-024,32.44,103.71,571,160,553,2306,43.65,9,True,C,91.6
+SKU-0203,Raw Materials Item 0203,Raw Materials,Calgary-Main,SUP-018,2.6,7.16,948,60,585,1952,15.43,34,True,C,430.2
+SKU-0204,Packaging Item 0204,Packaging,Vancouver-West,SUP-024,36.99,105.65,1352,325,1374,4464,24.97,42,True,C,378.9
+SKU-0205,Chemicals Item 0205,Chemicals,Edmonton-North,SUP-011,245.67,698.51,216,130,429,1780,11.09,27,True,A,136.3
+SKU-0206,Mechanical Parts Item 0206,Mechanical Parts,Edmonton-North,SUP-036,168.44,277.47,1234,248,1377,5467,80.65,14,True,A,107.1
+SKU-0207,Raw Materials Item 0207,Raw Materials,Toronto-Central,SUP-001,25.61,79.59,65,22,92,244,7.78,9,True,C,58.5
+SKU-0208,Raw Materials Item 0208,Raw Materials,Toronto-Central,SUP-056,11.87,36.28,189,11,83,323,5.55,13,True,B,238.6
+SKU-0209,Raw Materials Item 0209,Raw Materials,Calgary-Main,SUP-079,64.26,181.29,1280,135,1053,4765,36.72,25,True,C,244.0
+SKU-0210,Electronics Item 0210,Electronics,Calgary-Main,SUP-036,99.97,155.65,149,11,61,174,4.19,12,True,A,248.8
+SKU-0211,Packaging Item 0211,Packaging,Edmonton-North,SUP-007,7.23,23.98,1900,228,835,2846,20.92,29,True,B,635.9
+SKU-0212,Chemicals Item 0212,Chemicals,Montreal-East,SUP-025,36.39,112.69,352,42,137,449,18.91,5,True,A,130.3
+SKU-0213,Mechanical Parts Item 0213,Mechanical Parts,Toronto-Central,SUP-065,66.72,195.39,1027,589,1847,4654,33.99,37,True,C,211.5
+SKU-0214,Mechanical Parts Item 0214,Mechanical Parts,Montreal-East,SUP-075,24.33,76.86,351,37,367,1199,12.7,26,True,B,193.5
+SKU-0215,Electronics Item 0215,Electronics,Calgary-Main,SUP-010,5.49,10.1,576,175,1168,3874,70.95,14,True,B,56.8
+SKU-0216,Electronics Item 0216,Electronics,Toronto-Central,SUP-015,22.32,72.53,853,159,773,1885,21.17,29,True,C,282.1
+SKU-0217,Consumables Item 0217,Consumables,Montreal-East,SUP-007,46.75,98.78,737,59,599,2515,14.22,38,True,B,362.9
+SKU-0218,Assemblies Item 0218,Assemblies,Vancouver-West,SUP-040,151.85,488.16,109,21,187,698,8.31,20,True,A,91.8
+SKU-0219,Assemblies Item 0219,Assemblies,Montreal-East,SUP-049,3.0,9.43,575,201,1929,9606,43.21,40,True,B,93.1
+SKU-0220,Chemicals Item 0220,Chemicals,Montreal-East,SUP-008,4.23,6.96,1196,142,578,1420,13.23,33,True,C,633.0
+SKU-0221,Electronics Item 0221,Electronics,Calgary-Main,SUP-069,11.9,22.44,87,641,2251,6945,146.4,11,True,A,4.2
+SKU-0222,Mechanical Parts Item 0222,Mechanical Parts,Toronto-Central,SUP-074,31.1,95.97,2334,981,3265,10140,58.57,39,True,A,278.9
+SKU-0223,Electronics Item 0223,Electronics,Calgary-Main,SUP-008,4.35,8.1,600,38,223,471,6.87,27,True,C,611.8
+SKU-0224,Raw Materials Item 0224,Raw Materials,Calgary-Main,SUP-011,19.18,57.87,711,106,381,965,45.78,6,True,B,108.7
+SKU-0225,Electronics Item 0225,Electronics,Vancouver-West,SUP-055,4.96,14.28,157,9,70,331,2.56,24,True,C,429.4
+SKU-0226,Assemblies Item 0226,Assemblies,Calgary-Main,SUP-011,42.93,96.88,3018,477,2020,4640,46.76,33,False,C,451.8
+SKU-0227,Assemblies Item 0227,Assemblies,Toronto-Central,SUP-074,4.3,11.16,596,56,245,782,7.27,26,False,C,573.8
+SKU-0228,Chemicals Item 0228,Chemicals,Calgary-Main,SUP-078,3.65,9.33,2056,108,921,4176,21.38,38,True,B,673.0
+SKU-0229,Packaging Item 0229,Packaging,Toronto-Central,SUP-061,5.92,11.78,46,6,63,225,11.3,5,True,C,28.5
+SKU-0230,Electronics Item 0230,Electronics,Toronto-Central,SUP-049,4.62,14.01,251,24,122,580,3.4,29,True,B,517.4
+SKU-0231,Chemicals Item 0231,Chemicals,Edmonton-North,SUP-019,23.16,64.16,665,103,347,1325,27.13,9,True,B,171.6
+SKU-0232,Assemblies Item 0232,Assemblies,Edmonton-North,SUP-049,0.62,1.36,175,375,1275,3496,37.51,24,True,B,32.7
+SKU-0233,Packaging Item 0233,Packaging,Edmonton-North,SUP-073,4.07,11.04,898,289,994,2703,32.05,22,True,B,196.1
+SKU-0234,Mechanical Parts Item 0234,Mechanical Parts,Calgary-Main,SUP-028,0.61,0.86,38,25,205,471,45.09,4,True,C,5.9
+SKU-0235,Raw Materials Item 0235,Raw Materials,Vancouver-West,SUP-065,75.78,177.63,1634,101,607,1639,11.51,44,True,C,993.8
+SKU-0236,Packaging Item 0236,Packaging,Toronto-Central,SUP-003,20.65,27.67,95,53,228,1017,10.3,17,True,C,64.6
+SKU-0237,Raw Materials Item 0237,Raw Materials,Montreal-East,SUP-004,1.38,2.43,1645,332,1708,6499,45.87,30,True,B,251.1
+SKU-0238,Chemicals Item 0238,Chemicals,Calgary-Main,SUP-064,21.33,72.67,772,332,1366,5724,38.3,27,True,B,141.1
+SKU-0239,Assemblies Item 0239,Assemblies,Vancouver-West,SUP-002,2.76,4.76,150,63,328,751,7.15,37,True,A,146.8
+SKU-0240,Raw Materials Item 0240,Raw Materials,Vancouver-West,SUP-017,3.89,8.72,642,55,289,1262,16.73,14,True,B,268.6
+SKU-0241,Mechanical Parts Item 0241,Mechanical Parts,Calgary-Main,SUP-057,165.66,327.87,72,54,163,661,21.78,5,True,C,23.1
+SKU-0242,Mechanical Parts Item 0242,Mechanical Parts,Montreal-East,SUP-039,47.59,156.71,538,107,369,946,8.17,32,True,B,460.7
+SKU-0243,Mechanical Parts Item 0243,Mechanical Parts,Toronto-Central,SUP-079,49.07,70.38,3058,231,1491,3450,34.06,37,True,C,628.6
+SKU-0244,Raw Materials Item 0244,Raw Materials,Toronto-Central,SUP-028,161.58,522.86,286,139,676,2882,53.67,10,True,C,37.3
+SKU-0245,Mechanical Parts Item 0245,Mechanical Parts,Toronto-Central,SUP-029,11.06,38.64,1160,91,672,1440,32.3,18,True,B,251.4
+SKU-0246,Consumables Item 0246,Consumables,Calgary-Main,SUP-005,103.22,262.92,80,27,90,368,4.83,13,True,B,115.9
+SKU-0247,Electronics Item 0247,Electronics,Montreal-East,SUP-051,4.67,12.55,73,31,114,463,20.67,4,True,A,24.7
+SKU-0248,Consumables Item 0248,Consumables,Calgary-Main,SUP-008,34.06,66.48,250,78,380,1775,9.16,33,True,B,191.1
+SKU-0249,Assemblies Item 0249,Assemblies,Edmonton-North,SUP-056,7.34,20.78,2102,168,1071,2618,69.43,13,True,C,211.9
+SKU-0250,Mechanical Parts Item 0250,Mechanical Parts,Toronto-Central,SUP-033,19.54,32.35,2744,313,1658,3587,44.84,30,True,B,428.4
+SKU-0251,Chemicals Item 0251,Chemicals,Toronto-Central,SUP-063,13.92,24.08,1051,175,637,2493,11.54,40,True,A,637.3
+SKU-0252,Raw Materials Item 0252,Raw Materials,Toronto-Central,SUP-007,59.23,156.24,550,35,226,516,14.69,13,True,C,262.0
+SKU-0253,Electronics Item 0253,Electronics,Montreal-East,SUP-022,10.7,22.22,123,16,70,329,13.52,4,True,C,63.7
+SKU-0254,Chemicals Item 0254,Chemicals,Toronto-Central,SUP-077,22.05,42.17,146,214,726,3595,22.27,23,True,A,45.9
+SKU-0255,Assemblies Item 0255,Assemblies,Montreal-East,SUP-046,27.14,86.42,2647,530,2052,8827,39.03,39,True,C,474.8
+SKU-0256,Electronics Item 0256,Electronics,Toronto-Central,SUP-064,10.43,14.18,159,24,79,223,7.9,7,True,C,141.0
+SKU-0257,Mechanical Parts Item 0257,Mechanical Parts,Calgary-Main,SUP-024,8.45,19.42,394,170,941,3453,70.07,11,True,C,39.4
+SKU-0258,Consumables Item 0258,Consumables,Vancouver-West,SUP-051,4.67,10.2,231,97,549,2723,21.51,21,True,C,75.2
+SKU-0259,Electronics Item 0259,Electronics,Montreal-East,SUP-042,5.68,8.27,187,16,70,253,10.79,5,True,B,121.4
+SKU-0260,Raw Materials Item 0260,Raw Materials,Vancouver-West,SUP-055,1.9,2.97,1,78,283,1115,18.6,11,True,C,0.4
+SKU-0261,Packaging Item 0261,Packaging,Calgary-Main,SUP-078,23.46,37.09,992,98,477,2083,54.17,7,True,C,128.2
+SKU-0262,Assemblies Item 0262,Assemblies,Toronto-Central,SUP-040,1616.1,2639.67,377,107,573,2558,38.86,12,True,C,67.9
+SKU-0263,Electronics Item 0263,Electronics,Toronto-Central,SUP-045,4.54,6.28,224,35,112,554,5.94,13,True,C,263.8
+SKU-0264,Packaging Item 0264,Packaging,Vancouver-West,SUP-012,50.13,82.95,1246,141,580,2218,21.95,20,True,B,397.4
+SKU-0265,Assemblies Item 0265,Assemblies,Vancouver-West,SUP-060,4.98,7.03,98,22,103,384,9.04,9,False,C,75.9
+SKU-0266,Packaging Item 0266,Packaging,Calgary-Main,SUP-008,38.02,51.31,838,129,447,1930,28.9,11,True,B,203.0
+SKU-0267,Electronics Item 0267,Electronics,Montreal-East,SUP-058,77.91,209.3,281,48,191,873,11.02,13,True,B,178.5
+SKU-0268,Raw Materials Item 0268,Raw Materials,Edmonton-North,SUP-062,16.77,31.11,15,29,95,311,4.69,14,True,A,22.4
+SKU-0269,Electronics Item 0269,Electronics,Calgary-Main,SUP-009,13.81,31.51,493,549,1842,9038,76.04,17,True,B,45.4
+SKU-0270,Electronics Item 0270,Electronics,Vancouver-West,SUP-005,3.28,8.49,790,79,298,646,36.51,6,True,A,151.5
+SKU-0271,Consumables Item 0271,Consumables,Montreal-East,SUP-043,4.58,9.73,9564,398,3794,10262,87.07,39,True,B,768.9
+SKU-0272,Assemblies Item 0272,Assemblies,Calgary-Main,SUP-031,121.26,414.85,255,54,185,492,32.84,4,True,B,54.4
+SKU-0273,Electronics Item 0273,Electronics,Calgary-Main,SUP-001,18.53,44.79,384,53,189,406,6.48,21,True,B,414.6
+SKU-0274,Consumables Item 0274,Consumables,Calgary-Main,SUP-010,253.51,385.56,125,6,45,148,6.42,6,True,C,136.2
+SKU-0275,Assemblies Item 0275,Assemblies,Calgary-Main,SUP-048,6.75,19.07,1376,172,894,2014,40.08,18,True,C,240.3
+SKU-0276,Chemicals Item 0276,Chemicals,Edmonton-North,SUP-007,52.3,80.0,206,195,2134,7150,71.81,27,True,B,20.1
+SKU-0277,Chemicals Item 0277,Chemicals,Vancouver-West,SUP-036,32.66,62.37,1410,252,1161,4229,34.96,26,True,A,282.3
+SKU-0278,Electronics Item 0278,Electronics,Toronto-Central,SUP-055,4.02,13.95,1495,1154,4004,11222,123.89,23,True,A,84.5
+SKU-0279,Electronics Item 0279,Electronics,Toronto-Central,SUP-070,85.08,139.07,1408,151,1183,3179,46.92,22,True,A,210.0
+SKU-0280,Packaging Item 0280,Packaging,Vancouver-West,SUP-041,16.86,56.77,844,70,551,1879,20.91,23,True,B,282.6
+SKU-0281,Mechanical Parts Item 0281,Mechanical Parts,Toronto-Central,SUP-060,4.76,6.32,70,59,425,1820,16.63,22,True,C,29.5
+SKU-0282,Consumables Item 0282,Consumables,Toronto-Central,SUP-013,7.58,24.53,317,16,133,623,6.18,19,True,B,359.2
+SKU-0283,Electronics Item 0283,Electronics,Toronto-Central,SUP-007,10.62,25.46,1377,150,540,1102,18.57,21,True,B,519.0
+SKU-0284,Assemblies Item 0284,Assemblies,Toronto-Central,SUP-015,1.88,5.81,1992,283,2175,10161,99.6,19,True,C,140.0
+SKU-0285,Electronics Item 0285,Electronics,Edmonton-North,SUP-022,163.95,297.96,556,215,739,2825,23.8,22,True,B,163.5
+SKU-0286,Consumables Item 0286,Consumables,Edmonton-North,SUP-024,29.68,94.67,149,16,113,481,4.41,22,True,C,236.6
+SKU-0287,Mechanical Parts Item 0287,Mechanical Parts,Vancouver-West,SUP-011,13.5,31.73,2022,566,2179,5617,70.12,23,True,C,201.8
+SKU-0288,Electronics Item 0288,Electronics,Toronto-Central,SUP-030,12.4,28.34,84,44,146,593,11.35,9,True,C,51.8
+SKU-0289,Electronics Item 0289,Electronics,Toronto-Central,SUP-014,55.75,125.88,63,52,441,1477,12.54,31,True,C,35.2
+SKU-0290,Assemblies Item 0290,Assemblies,Toronto-Central,SUP-004,6.19,14.37,2747,364,1649,5445,61.21,21,True,B,314.2
+SKU-0291,Electronics Item 0291,Electronics,Vancouver-West,SUP-045,60.21,158.14,2765,309,1181,3746,27.24,32,True,B,710.5
+SKU-0292,Packaging Item 0292,Packaging,Vancouver-West,SUP-034,48.73,166.77,1291,203,627,2442,30.26,14,True,B,298.7
+SKU-0293,Consumables Item 0293,Consumables,Toronto-Central,SUP-028,18.51,57.12,635,374,1558,3954,30.35,39,True,C,146.5
+SKU-0294,Consumables Item 0294,Consumables,Edmonton-North,SUP-053,82.55,118.05,266,93,306,1005,42.68,5,True,B,43.6
+SKU-0295,Electronics Item 0295,Electronics,Montreal-East,SUP-018,511.79,1076.82,2699,157,1463,6254,30.37,43,True,C,622.0
+SKU-0296,Raw Materials Item 0296,Raw Materials,Vancouver-West,SUP-067,7.75,19.95,325,36,141,473,4.2,25,True,C,541.2
+SKU-0297,Raw Materials Item 0297,Raw Materials,Montreal-East,SUP-060,163.82,317.45,282,55,401,1559,13.32,26,True,B,148.2
+SKU-0298,Packaging Item 0298,Packaging,Montreal-East,SUP-079,163.75,285.85,543,17,188,410,11.38,15,True,C,334.1
+SKU-0299,Assemblies Item 0299,Assemblies,Edmonton-North,SUP-033,69.22,136.03,1384,165,644,1504,17.11,28,False,C,566.1
+SKU-0300,Consumables Item 0300,Consumables,Calgary-Main,SUP-021,115.0,156.09,812,84,411,1535,27.23,12,True,C,208.8
+SKU-0301,Chemicals Item 0301,Chemicals,Calgary-Main,SUP-050,164.84,526.24,1120,96,522,1763,21.29,20,True,C,368.3
+SKU-0302,Raw Materials Item 0302,Raw Materials,Toronto-Central,SUP-068,20.98,32.39,31,21,65,309,14.74,3,True,C,14.7
+SKU-0303,Electronics Item 0303,Electronics,Vancouver-West,SUP-015,28.49,54.48,274,22,154,348,6.58,20,True,B,291.6
+SKU-0304,Packaging Item 0304,Packaging,Toronto-Central,SUP-006,39.05,105.84,1883,205,728,1633,34.86,15,True,A,378.1
+SKU-0305,Chemicals Item 0305,Chemicals,Toronto-Central,SUP-079,30.7,42.74,2026,232,939,4481,64.26,11,True,C,220.7
+SKU-0306,Raw Materials Item 0306,Raw Materials,Calgary-Main,SUP-019,21.29,34.87,4164,442,1462,5361,33.99,30,True,A,857.5
+SKU-0307,Raw Materials Item 0307,Raw Materials,Edmonton-North,SUP-013,7.44,24.43,767,118,1003,4737,32.77,27,True,B,163.8
+SKU-0308,Packaging Item 0308,Packaging,Vancouver-West,SUP-006,49.97,88.19,146,6,61,298,18.37,3,True,A,55.6
+SKU-0309,Consumables Item 0309,Consumables,Montreal-East,SUP-071,31.52,102.71,722,98,316,645,6.4,34,True,A,789.8
+SKU-0310,Consumables Item 0310,Consumables,Vancouver-West,SUP-080,30.15,62.5,118,170,702,2305,15.19,35,True,B,54.4
+SKU-0311,Assemblies Item 0311,Assemblies,Toronto-Central,SUP-058,2.87,8.22,1201,115,409,968,9.18,32,True,A,915.7
+SKU-0312,Mechanical Parts Item 0312,Mechanical Parts,Toronto-Central,SUP-047,40.29,53.22,1025,66,392,1248,8.16,40,True,B,879.6
+SKU-0313,Chemicals Item 0313,Chemicals,Toronto-Central,SUP-050,8.22,24.88,7332,1154,3528,12627,124.97,19,True,B,410.7
+SKU-0314,Packaging Item 0314,Packaging,Calgary-Main,SUP-046,71.5,234.13,288,30,125,606,15.82,6,True,C,127.5
+SKU-0315,Consumables Item 0315,Consumables,Edmonton-North,SUP-055,38.67,118.31,3473,619,2932,10503,56.41,41,True,C,431.0
+SKU-0316,Assemblies Item 0316,Assemblies,Edmonton-North,SUP-046,9.46,20.19,335,25,165,821,14.01,10,True,C,167.3
+SKU-0317,Consumables Item 0317,Consumables,Vancouver-West,SUP-030,3.1,9.42,1494,124,598,2102,13.15,36,True,B,795.0
+SKU-0318,Raw Materials Item 0318,Raw Materials,Edmonton-North,SUP-028,32.36,65.11,1297,68,560,1880,44.72,11,True,A,203.0
+SKU-0319,Consumables Item 0319,Consumables,Edmonton-North,SUP-076,40.36,104.43,458,45,161,620,4.85,24,True,A,661.1
+SKU-0320,Consumables Item 0320,Consumables,Edmonton-North,SUP-061,17.75,52.31,7381,234,2573,8677,75.46,31,True,C,684.7
+SKU-0321,Raw Materials Item 0321,Raw Materials,Edmonton-North,SUP-048,30.95,75.75,2053,190,889,2138,53.75,13,True,B,267.4
+SKU-0322,Consumables Item 0322,Consumables,Toronto-Central,SUP-002,56.71,99.77,685,256,907,2079,72.34,9,False,C,66.3
+SKU-0323,Mechanical Parts Item 0323,Mechanical Parts,Vancouver-West,SUP-002,22.72,47.53,1076,244,834,2853,19.03,31,True,A,395.8
+SKU-0324,Mechanical Parts Item 0324,Mechanical Parts,Toronto-Central,SUP-032,8.93,21.74,894,75,407,1515,14.45,23,True,C,433.2
+SKU-0325,Raw Materials Item 0325,Raw Materials,Calgary-Main,SUP-043,21.37,41.94,4941,199,1892,4922,51.3,33,True,A,674.2
+SKU-0326,Packaging Item 0326,Packaging,Montreal-East,SUP-063,3.0,5.41,571,62,276,599,5.63,38,True,B,709.9
+SKU-0327,Consumables Item 0327,Consumables,Toronto-Central,SUP-059,18.04,44.99,1650,127,625,1392,35.57,14,True,B,324.7
+SKU-0328,Electronics Item 0328,Electronics,Edmonton-North,SUP-020,53.35,107.14,1385,277,1640,7628,56.78,24,True,A,170.7
+SKU-0329,Consumables Item 0329,Consumables,Toronto-Central,SUP-002,4.79,6.64,285,109,360,794,8.66,29,True,C,230.4
+SKU-0330,Raw Materials Item 0330,Raw Materials,Edmonton-North,SUP-074,128.0,249.7,28,54,175,874,7.57,16,True,C,25.9
+SKU-0331,Raw Materials Item 0331,Raw Materials,Montreal-East,SUP-007,2.1,4.11,548,607,1943,6757,33.39,40,True,C,114.9
+SKU-0332,Raw Materials Item 0332,Raw Materials,Vancouver-West,SUP-038,2.69,7.19,2732,491,1566,3133,26.22,41,True,C,729.4
+SKU-0333,Mechanical Parts Item 0333,Mechanical Parts,Vancouver-West,SUP-024,10.1,17.03,436,126,417,1255,7.1,41,True,C,430.0
+SKU-0334,Raw Materials Item 0334,Raw Materials,Edmonton-North,SUP-027,15.49,44.76,222,22,82,222,2.85,21,True,C,545.8
+SKU-0335,Packaging Item 0335,Packaging,Calgary-Main,SUP-076,39.17,67.21,449,176,632,2274,25.33,18,True,B,124.1
+SKU-0336,Electronics Item 0336,Electronics,Calgary-Main,SUP-078,10.91,28.6,52,8,24,107,5.36,3,True,B,67.9
+SKU-0337,Electronics Item 0337,Electronics,Vancouver-West,SUP-013,55.2,184.89,615,91,555,1803,15.99,29,True,B,269.1
+SKU-0338,Consumables Item 0338,Consumables,Toronto-Central,SUP-043,7.56,14.72,1125,145,480,1270,20.93,16,True,C,376.3
+SKU-0339,Assemblies Item 0339,Assemblies,Calgary-Main,SUP-057,90.74,220.44,1896,257,773,2140,34.39,15,True,A,385.9
+SKU-0340,Raw Materials Item 0340,Raw Materials,Edmonton-North,SUP-039,4.26,5.59,2191,238,860,3596,32.73,19,False,B,468.6
+SKU-0341,Packaging Item 0341,Packaging,Montreal-East,SUP-056,32.35,52.79,2055,304,977,3475,61.21,11,True,C,235.0
+SKU-0342,Electronics Item 0342,Electronics,Montreal-East,SUP-018,9.34,30.51,750,90,375,750,11.41,25,True,B,460.2
+SKU-0343,Chemicals Item 0343,Chemicals,Montreal-East,SUP-077,639.77,1132.87,1021,52,389,986,17.73,19,True,C,403.2
+SKU-0344,Electronics Item 0344,Electronics,Vancouver-West,SUP-076,13.66,18.68,658,50,496,1209,14.38,31,True,C,320.2
+SKU-0345,Consumables Item 0345,Consumables,Vancouver-West,SUP-072,3.87,5.27,1157,298,1628,3819,34.11,39,False,C,237.4
+SKU-0346,Consumables Item 0346,Consumables,Edmonton-North,SUP-004,5.93,16.86,155,7,80,238,18.29,4,True,B,59.3
+SKU-0347,Mechanical Parts Item 0347,Mechanical Parts,Calgary-Main,SUP-013,2.9,7.91,1357,58,477,1741,59.82,7,True,C,158.8
+SKU-0348,Mechanical Parts Item 0348,Mechanical Parts,Calgary-Main,SUP-055,6.26,20.81,4554,180,1520,5300,35.25,38,True,A,904.3
+SKU-0349,Chemicals Item 0349,Chemicals,Vancouver-West,SUP-054,203.81,575.25,16,62,201,590,5.13,27,True,C,21.8
+SKU-0350,Consumables Item 0350,Consumables,Calgary-Main,SUP-007,28.13,95.97,461,19,177,663,22.6,7,True,B,142.8
+SKU-0351,Raw Materials Item 0351,Raw Materials,Edmonton-North,SUP-011,10.31,17.71,245,20,141,586,6.35,19,True,B,270.3
+SKU-0352,Consumables Item 0352,Consumables,Vancouver-West,SUP-044,51.22,92.19,642,60,239,518,29.78,6,True,B,150.9
+SKU-0353,Consumables Item 0353,Consumables,Calgary-Main,SUP-010,13.28,35.7,591,122,428,1473,9.28,33,True,C,445.9
+SKU-0354,Electronics Item 0354,Electronics,Calgary-Main,SUP-075,16.09,24.19,599,39,227,818,5.87,32,True,C,714.7
+SKU-0355,Consumables Item 0355,Consumables,Vancouver-West,SUP-006,162.92,320.81,2615,241,1193,3582,25.74,37,True,C,711.1
+SKU-0356,Assemblies Item 0356,Assemblies,Edmonton-North,SUP-012,9.21,26.79,5870,1298,5075,23282,99.4,38,True,B,413.4
+SKU-0357,Electronics Item 0357,Electronics,Toronto-Central,SUP-066,27.67,39.6,12770,1429,6343,17760,111.68,44,True,C,800.4
+SKU-0358,Chemicals Item 0358,Chemicals,Edmonton-North,SUP-062,4.67,6.56,379,136,411,877,14.46,19,True,C,183.5
+SKU-0359,Chemicals Item 0359,Chemicals,Vancouver-West,SUP-013,60.8,105.96,390,76,265,994,21.0,9,True,A,130.0
+SKU-0360,Assemblies Item 0360,Assemblies,Edmonton-North,SUP-002,113.25,245.12,1120,731,2207,7355,98.39,15,True,B,79.7
+SKU-0361,Mechanical Parts Item 0361,Mechanical Parts,Calgary-Main,SUP-040,78.92,167.1,171,28,91,228,4.84,13,True,B,247.5
+SKU-0362,Electronics Item 0362,Electronics,Vancouver-West,SUP-039,15.3,38.56,216,114,393,1388,27.91,10,True,C,54.2
+SKU-0363,Consumables Item 0363,Consumables,Montreal-East,SUP-049,11.82,25.96,404,65,253,539,17.1,11,False,B,165.4
+SKU-0364,Consumables Item 0364,Consumables,Vancouver-West,SUP-075,40.75,55.92,139,15,95,369,4.42,18,True,C,220.2
+SKU-0365,Electronics Item 0365,Electronics,Calgary-Main,SUP-069,7.18,16.34,648,142,554,2316,17.18,24,True,B,264.0
+SKU-0366,Raw Materials Item 0366,Raw Materials,Calgary-Main,SUP-027,7.82,20.12,36,35,114,358,7.94,10,True,A,31.7
+SKU-0367,Consumables Item 0367,Consumables,Montreal-East,SUP-038,80.22,247.11,8572,923,7207,21380,251.34,25,True,C,238.7
+SKU-0368,Electronics Item 0368,Electronics,Calgary-Main,SUP-060,1.28,1.85,825,358,1141,5471,25.27,31,True,C,228.6
+SKU-0369,Chemicals Item 0369,Chemicals,Vancouver-West,SUP-061,8.64,16.16,535,47,411,1336,18.22,20,True,B,205.6
+SKU-0370,Consumables Item 0370,Consumables,Montreal-East,SUP-019,7.5,11.01,654,176,583,2775,13.55,30,True,B,337.8
+SKU-0371,Electronics Item 0371,Electronics,Calgary-Main,SUP-051,1.98,3.31,4043,730,2300,7607,47.58,33,True,C,594.8
+SKU-0372,Packaging Item 0372,Packaging,Montreal-East,SUP-034,8.51,14.88,136,13,99,315,6.63,13,True,C,143.5
+SKU-0373,Packaging Item 0373,Packaging,Montreal-East,SUP-025,117.81,363.34,1031,265,808,2987,36.2,15,True,B,199.4
+SKU-0374,Raw Materials Item 0374,Raw Materials,Montreal-East,SUP-056,134.99,259.19,5,116,502,1766,19.3,20,True,A,1.8
+SKU-0375,Assemblies Item 0375,Assemblies,Montreal-East,SUP-005,135.93,381.49,17,110,337,1193,8.73,26,True,B,13.6
+SKU-0376,Mechanical Parts Item 0376,Mechanical Parts,Montreal-East,SUP-040,8.0,19.32,966,58,555,1889,12.75,39,True,B,530.2
+SKU-0377,Assemblies Item 0377,Assemblies,Montreal-East,SUP-003,13.49,23.78,923,791,2571,9486,177.98,10,True,A,36.3
+SKU-0378,Packaging Item 0378,Packaging,Toronto-Central,SUP-017,18.59,25.74,723,59,281,925,7.94,28,True,C,637.6
+SKU-0379,Chemicals Item 0379,Chemicals,Toronto-Central,SUP-062,8.02,13.66,1239,144,472,2341,9.64,34,True,B,899.2
+SKU-0380,Chemicals Item 0380,Chemicals,Toronto-Central,SUP-072,141.82,352.56,139,35,117,317,6.3,13,True,C,154.5
+SKU-0381,Assemblies Item 0381,Assemblies,Montreal-East,SUP-019,285.69,636.45,17,19,70,234,2.85,18,True,C,41.8
+SKU-0382,Electronics Item 0382,Electronics,Vancouver-West,SUP-044,1152.38,3537.4,99,18,85,336,4.8,14,True,B,144.4
+SKU-0383,Assemblies Item 0383,Assemblies,Edmonton-North,SUP-006,35.94,100.51,656,79,513,1056,13.15,33,True,C,349.2
+SKU-0384,Chemicals Item 0384,Chemicals,Edmonton-North,SUP-015,70.43,166.13,1203,134,534,2555,133.28,3,True,C,63.2
+SKU-0385,Assemblies Item 0385,Assemblies,Vancouver-West,SUP-054,70.94,177.61,284,22,104,309,5.49,15,True,C,362.4
+SKU-0386,Chemicals Item 0386,Chemicals,Calgary-Main,SUP-051,1.51,4.4,10417,708,4182,8849,93.9,37,True,C,776.6
+SKU-0387,Electronics Item 0387,Electronics,Toronto-Central,SUP-016,36.42,60.7,297,53,323,1321,9.65,28,True,C,215.4
+SKU-0388,Assemblies Item 0388,Assemblies,Vancouver-West,SUP-035,48.68,120.64,534,305,1122,5392,25.55,32,True,B,146.3
+SKU-0389,Packaging Item 0389,Packaging,Edmonton-North,SUP-020,4.61,9.41,3123,170,1523,3694,48.32,28,True,C,452.5
+SKU-0390,Chemicals Item 0390,Chemicals,Edmonton-North,SUP-039,134.61,381.96,303,221,775,3664,13.85,40,False,B,153.1
+SKU-0391,Chemicals Item 0391,Chemicals,Calgary-Main,SUP-050,60.9,208.28,1105,190,681,2211,14.88,33,True,C,519.9
+SKU-0392,Packaging Item 0392,Packaging,Montreal-East,SUP-019,4.4,15.4,2845,400,1289,3523,55.57,16,True,B,358.4
+SKU-0393,Electronics Item 0393,Electronics,Calgary-Main,SUP-030,16.81,30.52,286,90,543,1177,13.73,33,True,C,145.8
+SKU-0394,Chemicals Item 0394,Chemicals,Edmonton-North,SUP-024,9.15,15.72,59,21,80,364,11.87,5,True,B,34.8
+SKU-0395,Packaging Item 0395,Packaging,Vancouver-West,SUP-021,13.68,32.59,1192,94,876,3748,18.62,42,True,A,448.1
+SKU-0396,Electronics Item 0396,Electronics,Vancouver-West,SUP-061,63.43,150.63,130,7,50,191,7.13,6,True,C,127.7
+SKU-0397,Raw Materials Item 0397,Raw Materials,Vancouver-West,SUP-009,66.88,222.89,1258,303,1267,3182,26.05,37,True,C,338.0
+SKU-0398,Mechanical Parts Item 0398,Mechanical Parts,Toronto-Central,SUP-031,19.74,37.49,1960,371,1911,7069,70.0,22,True,B,196.0
+SKU-0399,Packaging Item 0399,Packaging,Edmonton-North,SUP-078,14.94,35.07,22,61,246,525,46.35,4,True,A,3.3
+SKU-0400,Mechanical Parts Item 0400,Mechanical Parts,Montreal-East,SUP-066,707.31,1513.54,164,30,151,609,17.34,7,True,C,66.2
+SKU-0401,Raw Materials Item 0401,Raw Materials,Montreal-East,SUP-034,6.47,20.54,1567,187,831,2532,16.51,39,True,B,664.4
+SKU-0402,Assemblies Item 0402,Assemblies,Calgary-Main,SUP-008,155.82,388.37,1561,195,1243,3836,28.34,37,False,A,385.6
+SKU-0403,Electronics Item 0403,Electronics,Montreal-East,SUP-074,380.49,669.03,2513,198,1111,2324,35.13,26,True,C,500.8
+SKU-0404,Consumables Item 0404,Consumables,Calgary-Main,SUP-060,36.61,80.8,269,19,137,682,8.43,14,False,C,223.3
+SKU-0405,Packaging Item 0405,Packaging,Montreal-East,SUP-078,13.41,38.48,302,25,132,553,6.67,16,True,B,316.9
+SKU-0406,Raw Materials Item 0406,Raw Materials,Calgary-Main,SUP-022,20.32,26.59,321,2289,8446,17426,150.17,41,True,A,15.0
+SKU-0407,Electronics Item 0407,Electronics,Calgary-Main,SUP-052,17.91,35.85,4372,433,1486,3460,35.1,30,True,C,871.9
+SKU-0408,Chemicals Item 0408,Chemicals,Edmonton-North,SUP-019,66.11,127.7,647,114,765,2137,16.28,40,True,C,278.2
+SKU-0409,Packaging Item 0409,Packaging,Edmonton-North,SUP-037,45.88,152.05,414,53,172,699,5.67,21,True,A,510.9
+SKU-0410,Raw Materials Item 0410,Raw Materials,Calgary-Main,SUP-041,34.99,77.61,8074,2143,6792,27974,110.69,42,True,C,510.6
+SKU-0411,Assemblies Item 0411,Assemblies,Montreal-East,SUP-042,1.63,5.1,1940,145,685,1938,31.75,17,True,C,427.8
+SKU-0412,Mechanical Parts Item 0412,Mechanical Parts,Toronto-Central,SUP-044,9.45,22.78,2986,1165,4939,11360,85.77,44,True,C,243.7
+SKU-0413,Mechanical Parts Item 0413,Mechanical Parts,Toronto-Central,SUP-017,230.84,440.72,1417,78,476,1641,11.06,36,True,A,897.0
+SKU-0414,Consumables Item 0414,Consumables,Vancouver-West,SUP-004,487.88,1418.38,2667,297,1050,3742,22.14,34,True,C,843.1
+SKU-0415,Mechanical Parts Item 0415,Mechanical Parts,Vancouver-West,SUP-033,79.19,268.67,6640,474,2750,10409,87.54,26,True,B,531.0
+SKU-0416,Electronics Item 0416,Electronics,Vancouver-West,SUP-064,9.07,23.31,90,286,896,3267,14.19,43,True,C,44.4
+SKU-0417,Mechanical Parts Item 0417,Mechanical Parts,Calgary-Main,SUP-039,5.18,17.74,1101,170,650,1588,12.98,37,True,B,594.0
+SKU-0418,Electronics Item 0418,Electronics,Toronto-Central,SUP-071,6.18,8.67,722,366,3065,7324,69.22,39,True,C,73.0
+SKU-0419,Mechanical Parts Item 0419,Mechanical Parts,Calgary-Main,SUP-006,28.22,66.61,5460,628,1934,8270,35.29,37,True,B,1083.1
+SKU-0420,Mechanical Parts Item 0420,Mechanical Parts,Calgary-Main,SUP-021,117.68,247.83,1913,1031,3916,14268,120.21,24,True,C,111.4
+SKU-0421,Electronics Item 0421,Electronics,Toronto-Central,SUP-021,2.7,5.12,117,26,93,354,5.17,13,True,B,158.5
+SKU-0422,Assemblies Item 0422,Assemblies,Montreal-East,SUP-013,270.48,677.28,44,3,15,59,1.05,11,True,B,294.3
+SKU-0423,Mechanical Parts Item 0423,Mechanical Parts,Montreal-East,SUP-073,10.7,24.57,2122,676,2684,6452,71.72,28,True,C,207.1
+SKU-0424,Raw Materials Item 0424,Raw Materials,Montreal-East,SUP-001,33.18,75.33,352,18,160,585,17.76,8,False,C,138.7
+SKU-0425,Assemblies Item 0425,Assemblies,Vancouver-West,SUP-035,11.04,32.45,101,123,841,2379,32.64,22,False,C,21.7
+SKU-0426,Assemblies Item 0426,Assemblies,Montreal-East,SUP-047,5.05,16.53,2483,627,2012,5377,76.93,18,True,C,225.9
+SKU-0427,Consumables Item 0427,Consumables,Montreal-East,SUP-010,5.35,13.96,585,273,2104,4539,91.57,20,True,C,44.7
+SKU-0428,Consumables Item 0428,Consumables,Calgary-Main,SUP-069,32.99,87.98,4346,885,3270,16194,68.14,35,True,B,446.5
+SKU-0429,Raw Materials Item 0429,Raw Materials,Toronto-Central,SUP-016,18.5,29.6,295,20,139,301,23.73,5,True,C,87.0
+SKU-0430,Chemicals Item 0430,Chemicals,Calgary-Main,SUP-064,27.79,40.59,1777,138,915,3129,21.58,36,True,B,576.3
+SKU-0431,Packaging Item 0431,Packaging,Montreal-East,SUP-079,90.3,162.67,1485,279,1386,4874,39.52,28,True,A,263.0
+SKU-0432,Chemicals Item 0432,Chemicals,Vancouver-West,SUP-069,366.13,1044.46,557,69,218,492,16.61,9,True,A,234.8
+SKU-0433,Electronics Item 0433,Electronics,Edmonton-North,SUP-059,15.37,41.67,249,479,1477,6304,34.4,29,True,B,50.7
+SKU-0434,Consumables Item 0434,Consumables,Montreal-East,SUP-071,24.82,81.58,183,45,271,593,28.24,8,False,C,45.4
+SKU-0435,Packaging Item 0435,Packaging,Toronto-Central,SUP-060,27.78,93.5,425,331,1845,9037,48.84,31,True,C,60.9
+SKU-0436,Consumables Item 0436,Consumables,Montreal-East,SUP-001,5.17,16.38,67,13,58,235,2.13,21,True,C,220.6
+SKU-0437,Electronics Item 0437,Electronics,Edmonton-North,SUP-028,15.87,49.57,1350,343,1499,5492,29.65,39,True,C,318.7
+SKU-0438,Mechanical Parts Item 0438,Mechanical Parts,Calgary-Main,SUP-069,7.1,20.94,18993,1918,8148,26519,239.61,26,True,C,554.9
+SKU-0439,Consumables Item 0439,Consumables,Toronto-Central,SUP-007,88.37,143.22,1179,125,487,2210,12.48,29,True,C,661.4
+SKU-0440,Electronics Item 0440,Electronics,Toronto-Central,SUP-019,13.05,38.56,133,13,93,256,2.6,31,True,B,358.7
+SKU-0441,Electronics Item 0441,Electronics,Vancouver-West,SUP-022,19.17,58.72,920,212,747,2284,14.85,36,True,C,433.6
+SKU-0442,Raw Materials Item 0442,Raw Materials,Montreal-East,SUP-001,16.34,30.91,2952,291,1514,4081,94.04,13,True,C,219.7
+SKU-0443,Chemicals Item 0443,Chemicals,Edmonton-North,SUP-062,127.98,286.01,1264,199,696,2506,14.21,35,True,A,622.9
+SKU-0444,Mechanical Parts Item 0444,Mechanical Parts,Edmonton-North,SUP-077,16.76,23.41,1374,97,523,2144,16.39,26,True,A,586.7
+SKU-0445,Chemicals Item 0445,Chemicals,Edmonton-North,SUP-016,42.45,97.25,3077,289,1959,4987,69.57,24,True,C,309.6
+SKU-0446,Mechanical Parts Item 0446,Mechanical Parts,Calgary-Main,SUP-008,32.89,92.93,415,103,310,887,8.28,25,False,B,350.7
+SKU-0447,Assemblies Item 0447,Assemblies,Toronto-Central,SUP-061,24.26,74.62,4077,350,2002,5991,42.36,39,True,C,673.8
+SKU-0448,Raw Materials Item 0448,Raw Materials,Vancouver-West,SUP-050,49.43,103.87,995,414,1280,3312,24.75,35,True,C,281.4
+SKU-0449,Electronics Item 0449,Electronics,Montreal-East,SUP-049,6.55,22.11,2355,256,816,2086,93.38,6,True,C,176.5
+SKU-0450,Assemblies Item 0450,Assemblies,Montreal-East,SUP-070,35.53,58.16,682,117,385,1040,66.88,4,True,A,71.4
+SKU-0451,Assemblies Item 0451,Assemblies,Calgary-Main,SUP-058,4.96,10.68,244,42,286,1043,20.36,12,True,C,83.9
+SKU-0452,Mechanical Parts Item 0452,Mechanical Parts,Vancouver-West,SUP-065,18.36,30.01,396,109,373,902,7.32,36,False,A,378.7
+SKU-0453,Consumables Item 0453,Consumables,Toronto-Central,SUP-018,49.82,158.81,328,39,266,1084,9.87,23,True,B,232.6
+SKU-0454,Chemicals Item 0454,Chemicals,Montreal-East,SUP-013,47.37,91.91,81,12,68,300,11.2,5,True,B,50.6
+SKU-0455,Raw Materials Item 0455,Raw Materials,Montreal-East,SUP-070,5.42,17.73,203,45,138,599,6.62,14,True,C,214.7
+SKU-0456,Electronics Item 0456,Electronics,Montreal-East,SUP-027,5.68,11.83,13055,1231,5099,19499,92.09,42,True,C,992.4
+SKU-0457,Electronics Item 0457,Electronics,Calgary-Main,SUP-058,161.7,492.15,62,31,131,566,12.45,8,True,C,34.9
+SKU-0458,Electronics Item 0458,Electronics,Calgary-Main,SUP-079,59.09,191.0,970,53,393,1774,30.95,11,True,C,219.4
+SKU-0459,Chemicals Item 0459,Chemicals,Calgary-Main,SUP-025,10.49,24.21,672,101,381,1610,11.22,25,False,C,419.4
+SKU-0460,Chemicals Item 0460,Chemicals,Edmonton-North,SUP-032,70.71,128.26,626,626,2164,6868,38.46,40,True,C,114.0
+SKU-0461,Assemblies Item 0461,Assemblies,Vancouver-West,SUP-035,174.69,601.15,890,205,755,3723,15.28,36,True,B,407.7
+SKU-0462,Packaging Item 0462,Packaging,Vancouver-West,SUP-019,10.01,29.49,204,11,69,249,6.47,9,True,B,220.7
+SKU-0463,Consumables Item 0463,Consumables,Edmonton-North,SUP-046,38.59,104.48,16,49,164,752,6.74,17,True,B,16.6
+SKU-0464,Assemblies Item 0464,Assemblies,Calgary-Main,SUP-076,6.59,12.72,738,266,1383,6847,41.38,27,True,C,124.8
+SKU-0465,Consumables Item 0465,Consumables,Calgary-Main,SUP-010,6.75,11.69,309,39,155,641,6.44,18,True,A,336.1
+SKU-0466,Consumables Item 0466,Consumables,Edmonton-North,SUP-053,1.73,4.84,139,40,394,986,19.65,18,True,C,49.5
+SKU-0467,Chemicals Item 0467,Chemicals,Calgary-Main,SUP-072,26.51,38.52,6079,431,2692,12875,70.66,32,True,B,602.2
+SKU-0468,Consumables Item 0468,Consumables,Toronto-Central,SUP-051,15.45,27.76,381,106,465,2076,32.68,11,True,C,81.6
+SKU-0469,Mechanical Parts Item 0469,Mechanical Parts,Calgary-Main,SUP-022,10.39,34.1,626,157,819,3532,66.15,10,True,B,66.2
+SKU-0470,Electronics Item 0470,Electronics,Calgary-Main,SUP-055,6.87,20.99,783,165,1306,5833,39.35,29,True,C,139.3
+SKU-0471,Mechanical Parts Item 0471,Mechanical Parts,Vancouver-West,SUP-060,17.05,29.74,683,90,285,1024,6.5,30,True,C,735.8
+SKU-0472,Assemblies Item 0472,Assemblies,Edmonton-North,SUP-080,33.78,81.85,1064,213,1128,4163,20.79,44,True,A,358.3
+SKU-0473,Assemblies Item 0473,Assemblies,Calgary-Main,SUP-038,25.68,59.75,332,28,126,267,8.17,12,True,B,284.3
+SKU-0474,Chemicals Item 0474,Chemicals,Calgary-Main,SUP-074,14.4,41.99,3671,441,1634,4393,37.29,32,True,C,689.1
+SKU-0475,Consumables Item 0475,Consumables,Calgary-Main,SUP-044,19.43,57.87,680,240,975,2648,45.95,16,False,C,103.6
+SKU-0476,Consumables Item 0476,Consumables,Edmonton-North,SUP-056,52.72,74.43,798,106,936,3430,48.81,17,True,B,114.4
+SKU-0477,Packaging Item 0477,Packaging,Calgary-Main,SUP-040,5.91,11.97,265,25,138,590,7.52,15,True,C,246.7
+SKU-0478,Packaging Item 0478,Packaging,Calgary-Main,SUP-037,13.97,39.2,1059,276,1334,4393,35.26,30,True,B,210.2
+SKU-0479,Consumables Item 0479,Consumables,Edmonton-North,SUP-077,54.57,127.87,35,212,718,3233,12.05,42,False,A,20.3
+SKU-0480,Consumables Item 0480,Consumables,Toronto-Central,SUP-067,46.93,148.01,1184,204,1724,7875,56.29,27,True,C,147.2
+SKU-0481,Packaging Item 0481,Packaging,Montreal-East,SUP-023,12.43,19.44,2884,528,4969,15754,317.24,14,True,C,63.6
+SKU-0482,Raw Materials Item 0482,Raw Materials,Calgary-Main,SUP-042,152.47,227.49,1694,66,630,2591,16.58,34,True,B,715.2
+SKU-0483,Consumables Item 0483,Consumables,Toronto-Central,SUP-059,6.02,16.34,852,91,662,2880,17.84,32,True,C,334.3
+SKU-0484,Chemicals Item 0484,Chemicals,Edmonton-North,SUP-013,11.49,21.51,4970,582,2342,6299,62.87,28,False,C,553.4
+SKU-0485,Chemicals Item 0485,Chemicals,Toronto-Central,SUP-030,87.4,142.37,714,118,791,3146,134.56,5,True,C,37.1
+SKU-0486,Consumables Item 0486,Consumables,Montreal-East,SUP-054,5.84,17.21,17,7,28,78,6.96,3,True,B,17.1
+SKU-0487,Electronics Item 0487,Electronics,Calgary-Main,SUP-018,80.22,199.32,640,166,556,2133,14.46,27,True,A,309.8
+SKU-0488,Mechanical Parts Item 0488,Mechanical Parts,Toronto-Central,SUP-047,69.36,205.39,675,104,693,1988,20.31,29,True,C,232.6
+SKU-0489,Raw Materials Item 0489,Raw Materials,Edmonton-North,SUP-037,3.56,10.05,2540,1518,4755,22385,124.49,26,True,B,142.8
+SKU-0490,Electronics Item 0490,Electronics,Calgary-Main,SUP-062,30.03,96.39,4,49,147,628,5.42,18,True,A,5.2
+SKU-0491,Consumables Item 0491,Consumables,Vancouver-West,SUP-075,47.59,89.86,4237,478,1456,5646,88.95,11,True,C,333.4
+SKU-0492,Mechanical Parts Item 0492,Mechanical Parts,Edmonton-North,SUP-010,147.21,416.78,836,43,333,725,36.27,8,True,B,161.3
+SKU-0493,Assemblies Item 0493,Assemblies,Calgary-Main,SUP-058,2.89,3.89,1137,127,419,1422,13.25,22,True,A,600.6
+SKU-0494,Chemicals Item 0494,Chemicals,Toronto-Central,SUP-059,7.07,16.62,1296,257,1783,7188,34.69,44,True,B,261.5
+SKU-0495,Assemblies Item 0495,Assemblies,Vancouver-West,SUP-005,8.16,16.38,44,53,187,824,9.59,14,True,B,32.1
+SKU-0496,Packaging Item 0496,Packaging,Vancouver-West,SUP-012,26.61,48.11,9814,723,3999,15476,78.0,42,True,C,880.7
+SKU-0497,Assemblies Item 0497,Assemblies,Edmonton-North,SUP-031,127.58,276.77,381,48,173,848,8.93,14,True,A,298.7
+SKU-0498,Chemicals Item 0498,Chemicals,Montreal-East,SUP-024,18.65,57.77,1409,519,1598,6538,38.55,28,True,C,255.9
+SKU-0499,Electronics Item 0499,Electronics,Montreal-East,SUP-010,19.11,45.35,852,87,478,1273,35.57,11,True,C,167.7
+SKU-0500,Chemicals Item 0500,Chemicals,Calgary-Main,SUP-060,17.93,39.02,151,14,108,392,23.56,4,True,C,44.9

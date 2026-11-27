@@ -1,0 +1,15 @@
+pandas>=2.0
+numpy>=1.24
+networkx>=3.0
+scikit-learn>=1.3
+xgboost>=2.0
+joblib>=1.3
+streamlit>=1.32
+plotly>=5.18
+pyvis>=0.3.2
+shap>=0.44
+# pytest is optional: the tests also run with `python -m unittest`
+pytest>=7.0
+# neo4j is optional: only needed to run neo4j_sync against a live database
+# (the Cypher export and the tests work without it)
+# neo4j>=5.0

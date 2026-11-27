@@ -1,0 +1,81 @@
+supplier_id,supplier_name,country,category,on_time_delivery_rate,quality_acceptance_rate,avg_lead_time_days,lead_time_variability,payment_terms_days,is_preferred,risk_tier,annual_spend
+SUP-001,Supplier A1 Automotive,Germany,Consumables,0.825,0.889,40,0.31,60,True,Low,56502.25
+SUP-002,Supplier B1 Industrial,USA,Assemblies,0.778,0.775,11,0.29,60,False,Medium,8283.9
+SUP-003,Supplier C1 Automotive,Mexico,Consumables,0.782,0.906,41,0.2,90,True,Medium,60911.53
+SUP-004,Supplier D1 Industrial,China,Chemicals,0.63,0.769,16,0.4,45,False,Low,64858.71
+SUP-005,Supplier E1 Consumer Goods,China,Chemicals,0.791,0.924,8,0.29,30,False,Low,361613.06
+SUP-006,Supplier F1 Automotive,Taiwan,Consumables,0.902,0.836,15,0.19,90,False,High,76644.65
+SUP-007,Supplier G1 Automotive,Taiwan,Chemicals,0.556,0.927,7,0.11,45,True,Medium,158875.34
+SUP-008,Supplier H1 Industrial,India,Electronics,0.643,0.846,35,0.32,60,False,Low,29215.29
+SUP-009,Supplier I1 Industrial,Taiwan,Packaging,0.886,0.874,44,0.09,30,False,Low,176919.48
+SUP-010,Supplier J1 Automotive,Taiwan,Assemblies,0.876,0.964,22,0.08,60,False,High,87162.17
+SUP-011,Supplier K1 Consumer Goods,Germany,Raw Materials,0.73,0.935,28,0.11,45,True,Low,65556.69
+SUP-012,Supplier L1 Industrial,China,Packaging,0.548,0.693,22,0.06,60,True,High,226502.26
+SUP-013,Supplier M1 Automotive,Mexico,Assemblies,0.801,0.879,44,0.36,90,False,Low,44666.47
+SUP-014,Supplier N1 Automotive,USA,Electronics,0.572,0.98,5,0.29,45,False,Medium,8961.91
+SUP-015,Supplier O1 Electronics,India,Assemblies,0.912,0.712,18,0.27,60,False,Medium,15884.3
+SUP-016,Supplier P1 Consumer Goods,India,Assemblies,0.876,0.96,23,0.26,90,True,Low,29555.48
+SUP-017,Supplier Q1 Electronics,Mexico,Raw Materials,0.65,0.986,8,0.21,45,False,Low,298282.53
+SUP-018,Supplier R1 Industrial,USA,Raw Materials,0.856,0.921,6,0.25,45,True,High,2272.9
+SUP-019,Supplier S1 Consumer Goods,USA,Packaging,0.686,0.834,19,0.38,45,False,Low,237570.95
+SUP-020,Supplier T1 Industrial,China,Chemicals,0.81,0.799,25,0.11,60,True,Medium,22062.84
+SUP-021,Supplier U1 Industrial,China,Assemblies,0.887,0.66,23,0.35,45,True,Medium,46908.76
+SUP-022,Supplier V1 Automotive,Taiwan,Raw Materials,0.662,0.883,9,0.25,45,False,Low,521351.18
+SUP-023,Supplier W1 Electronics,Mexico,Electronics,0.852,0.952,26,0.31,45,False,Medium,154457.69
+SUP-024,Supplier X1 Automotive,Canada,Packaging,0.738,0.723,31,0.22,45,False,High,47109.87
+SUP-025,Supplier Y1 Automotive,China,Electronics,0.703,0.836,42,0.3,45,True,Low,83498.06
+SUP-026,Supplier Z1 Consumer Goods,India,Mechanical Parts,0.775,0.811,19,0.22,90,False,Low,60664.98
+SUP-027,Supplier A2 Consumer Goods,Mexico,Packaging,0.935,0.915,35,0.07,90,False,Medium,287078.96
+SUP-028,Supplier B2 Industrial,Taiwan,Mechanical Parts,0.813,0.691,32,0.3,30,False,Low,58106.56
+SUP-029,Supplier C2 Consumer Goods,China,Raw Materials,0.607,0.94,13,0.22,45,False,Medium,55180.86
+SUP-030,Supplier D2 Consumer Goods,Mexico,Chemicals,0.837,0.917,34,0.39,30,False,Low,97536.17
+SUP-031,Supplier E2 Automotive,Germany,Mechanical Parts,0.634,0.914,20,0.14,90,False,Medium,4200242.73
+SUP-032,Supplier F2 Automotive,USA,Raw Materials,0.952,0.977,19,0.3,60,False,Medium,6047.47
+SUP-033,Supplier G2 Electronics,India,Chemicals,0.953,0.899,42,0.23,90,False,Low,8654.7
+SUP-034,Supplier H2 Electronics,Taiwan,Electronics,0.56,0.896,21,0.24,45,False,Low,743269.99
+SUP-035,Supplier I2 Automotive,Canada,Assemblies,0.72,0.976,41,0.38,45,True,Medium,212768.74
+SUP-036,Supplier J2 Electronics,Taiwan,Chemicals,0.795,0.542,12,0.39,45,False,Low,271391.88
+SUP-037,Supplier K2 Industrial,USA,Chemicals,0.745,0.87,4,0.19,45,False,High,716295.98
+SUP-038,Supplier L2 Electronics,USA,Mechanical Parts,0.853,0.935,11,0.38,30,False,Low,55921.72
+SUP-039,Supplier M2 Electronics,India,Chemicals,0.861,0.8,9,0.07,30,False,Low,56920.14
+SUP-040,Supplier N2 Automotive,Mexico,Chemicals,0.912,0.911,23,0.08,60,False,Medium,222239.7
+SUP-041,Supplier O2 Electronics,Canada,Raw Materials,0.907,0.948,19,0.31,30,True,High,131672.31
+SUP-042,Supplier P2 Electronics,USA,Electronics,0.91,0.939,4,0.23,45,False,High,67999.22
+SUP-043,Supplier Q2 Automotive,Mexico,Consumables,0.521,0.914,10,0.23,45,False,Low,8247.0
+SUP-044,Supplier R2 Automotive,Germany,Packaging,0.746,0.899,40,0.22,60,False,Medium,72010.16
+SUP-045,Supplier S2 Industrial,China,Consumables,0.77,0.612,42,0.21,90,False,Medium,16067.01
+SUP-046,Supplier T2 Automotive,India,Packaging,0.868,0.92,42,0.12,90,False,Low,48429.53
+SUP-047,Supplier U2 Industrial,India,Chemicals,0.885,0.665,37,0.28,45,True,Low,253953.64
+SUP-048,Supplier V2 Automotive,USA,Raw Materials,0.961,0.517,15,0.17,90,False,Medium,334591.66
+SUP-049,Supplier W2 Automotive,USA,Raw Materials,0.892,0.925,25,0.35,90,False,Low,63118.71
+SUP-050,Supplier X2 Electronics,Taiwan,Electronics,0.896,0.665,40,0.09,60,True,Medium,41324.35
+SUP-051,Supplier Y2 Electronics,Taiwan,Assemblies,0.818,0.875,43,0.39,45,False,Low,222863.5
+SUP-052,Supplier Z2 Industrial,India,Consumables,0.979,0.918,24,0.07,30,False,Medium,4574.02
+SUP-053,Supplier A3 Industrial,USA,Chemicals,0.853,0.806,18,0.17,90,True,Medium,34360.54
+SUP-054,Supplier B3 Electronics,Mexico,Packaging,0.802,0.97,29,0.08,60,False,Low,13949.17
+SUP-055,Supplier C3 Consumer Goods,Canada,Chemicals,0.983,0.979,36,0.27,60,False,Medium,33523.03
+SUP-056,Supplier D3 Automotive,Taiwan,Mechanical Parts,0.652,0.761,21,0.11,30,True,Medium,252872.25
+SUP-057,Supplier E3 Industrial,India,Electronics,0.867,0.966,38,0.21,45,False,Low,18394.08
+SUP-058,Supplier F3 Electronics,USA,Assemblies,0.613,0.919,9,0.07,60,False,High,89635.31
+SUP-059,Supplier G3 Consumer Goods,China,Packaging,0.648,0.744,16,0.36,45,False,Low,58786.35
+SUP-060,Supplier H3 Industrial,China,Packaging,0.765,0.961,24,0.15,90,True,Low,33045.07
+SUP-061,Supplier I3 Consumer Goods,Mexico,Mechanical Parts,0.892,0.885,34,0.09,30,True,Medium,382578.86
+SUP-062,Supplier J3 Electronics,India,Electronics,0.876,0.816,20,0.39,60,False,High,3303.15
+SUP-063,Supplier K3 Automotive,Germany,Chemicals,0.822,0.796,20,0.12,30,False,Medium,6077.17
+SUP-064,Supplier L3 Industrial,Canada,Electronics,0.806,0.839,19,0.17,60,True,Medium,66605.09
+SUP-065,Supplier M3 Electronics,USA,Raw Materials,0.875,0.656,19,0.19,45,False,Low,73046.16
+SUP-066,Supplier N3 Electronics,USA,Packaging,0.89,0.948,39,0.17,30,True,High,89117.55
+SUP-067,Supplier O3 Consumer Goods,Mexico,Packaging,0.766,0.856,8,0.31,45,False,Low,69755.35
+SUP-068,Supplier P3 Automotive,India,Electronics,0.761,0.992,5,0.33,30,False,Low,88004.0
+SUP-069,Supplier Q3 Industrial,USA,Chemicals,0.818,0.896,9,0.12,90,False,Medium,73488.41
+SUP-070,Supplier R3 Automotive,Germany,Assemblies,0.665,0.793,31,0.38,45,True,Medium,936680.33
+SUP-071,Supplier S3 Consumer Goods,Mexico,Assemblies,0.948,0.882,36,0.1,60,False,Low,10187.38
+SUP-072,Supplier T3 Consumer Goods,Mexico,Packaging,0.739,0.816,37,0.2,30,False,High,67572.5
+SUP-073,Supplier U3 Industrial,Germany,Assemblies,0.774,0.87,35,0.27,60,False,High,5810.21
+SUP-074,Supplier V3 Automotive,China,Mechanical Parts,0.84,0.868,24,0.36,60,False,Low,383335.83
+SUP-075,Supplier W3 Industrial,USA,Assemblies,0.518,0.78,38,0.06,90,True,Medium,241587.61
+SUP-076,Supplier X3 Consumer Goods,Mexico,Raw Materials,0.844,0.904,34,0.24,45,True,Low,113868.14
+SUP-077,Supplier Y3 Electronics,Germany,Raw Materials,0.813,0.955,17,0.4,90,False,Medium,6493.62
+SUP-078,Supplier Z3 Automotive,India,Raw Materials,0.891,0.89,21,0.31,90,False,Medium,96385.3
+SUP-079,Supplier A4 Automotive,Mexico,Consumables,0.904,0.978,10,0.06,60,False,Medium,8633.7
+SUP-080,Supplier B4 Automotive,China,Assemblies,0.653,0.9,21,0.09,30,False,Low,46762.52

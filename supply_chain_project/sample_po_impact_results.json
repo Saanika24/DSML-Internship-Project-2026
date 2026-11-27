@@ -1,0 +1,336 @@
+{
+  "schema_version": "1.1",
+  "data_label": "SYNTHETIC SAMPLE DATA - purchase-order format demo, not real supply-chain data",
+  "time_window": {
+    "start": null,
+    "end": null
+  },
+  "disruption_count": 4,
+  "results": [
+    {
+      "disruption_id": "D-DEMO-1",
+      "disrupted_entity_id": "SUP-DEMO-01",
+      "disrupted_entity_type": "supplier",
+      "disruption_type": "flood",
+      "severity": 0.8,
+      "location": "Chennai",
+      "start_date": "2026-11-10",
+      "end_date": "2026-11-23",
+      "duration_days": 14,
+      "concurrent_disruption_ids": [
+        "D-DEMO-2",
+        "D-DEMO-3"
+      ],
+      "affected_entities": [
+        {
+          "entity_id": "SKU-DEMO-A",
+          "entity_name": "SKU-DEMO-A",
+          "entity_type": "sku",
+          "location": null,
+          "impact_score": 0.48,
+          "risk_level": "medium",
+          "hops": 1
+        },
+        {
+          "entity_id": "WH-DEMO-S",
+          "entity_name": "Demo South Warehouse",
+          "entity_type": "warehouse",
+          "location": "Chennai",
+          "impact_score": 0.288,
+          "risk_level": "low",
+          "hops": 2
+        },
+        {
+          "entity_id": "WH-DEMO-N",
+          "entity_name": "Demo North Warehouse",
+          "entity_type": "warehouse",
+          "location": "Delhi",
+          "impact_score": 0.192,
+          "risk_level": "low",
+          "hops": 2
+        }
+      ],
+      "propagation_paths": [
+        [
+          "SUP-DEMO-01",
+          "SKU-DEMO-A"
+        ],
+        [
+          "SUP-DEMO-01",
+          "SKU-DEMO-A",
+          "WH-DEMO-N"
+        ],
+        [
+          "SUP-DEMO-01",
+          "SKU-DEMO-A",
+          "WH-DEMO-S"
+        ]
+      ],
+      "paths_truncated": false,
+      "summary": {
+        "total_affected": 3,
+        "affected_by_type": {
+          "sku": 1,
+          "warehouse": 2
+        },
+        "highest_risk_level": "medium"
+      }
+    },
+    {
+      "disruption_id": "D-DEMO-2",
+      "disrupted_entity_id": "SUP-DEMO-02",
+      "disrupted_entity_type": "supplier",
+      "disruption_type": "fire",
+      "severity": 1.0,
+      "location": "Pune",
+      "start_date": "2026-11-15",
+      "end_date": "2026-11-24",
+      "duration_days": 10,
+      "concurrent_disruption_ids": [
+        "D-DEMO-1",
+        "D-DEMO-3"
+      ],
+      "affected_entities": [
+        {
+          "entity_id": "SKU-DEMO-B",
+          "entity_name": "SKU-DEMO-B",
+          "entity_type": "sku",
+          "location": null,
+          "impact_score": 1.0,
+          "risk_level": "high",
+          "hops": 1
+        },
+        {
+          "entity_id": "WH-DEMO-N",
+          "entity_name": "Demo North Warehouse",
+          "entity_type": "warehouse",
+          "location": "Delhi",
+          "impact_score": 0.76,
+          "risk_level": "high",
+          "hops": 2
+        },
+        {
+          "entity_id": "SKU-DEMO-A",
+          "entity_name": "SKU-DEMO-A",
+          "entity_type": "sku",
+          "location": null,
+          "impact_score": 0.4,
+          "risk_level": "medium",
+          "hops": 1
+        },
+        {
+          "entity_id": "WH-DEMO-S",
+          "entity_name": "Demo South Warehouse",
+          "entity_type": "warehouse",
+          "location": "Chennai",
+          "impact_score": 0.24,
+          "risk_level": "low",
+          "hops": 2
+        }
+      ],
+      "propagation_paths": [
+        [
+          "SUP-DEMO-02",
+          "SKU-DEMO-A"
+        ],
+        [
+          "SUP-DEMO-02",
+          "SKU-DEMO-B"
+        ],
+        [
+          "SUP-DEMO-02",
+          "SKU-DEMO-A",
+          "WH-DEMO-N"
+        ],
+        [
+          "SUP-DEMO-02",
+          "SKU-DEMO-A",
+          "WH-DEMO-S"
+        ],
+        [
+          "SUP-DEMO-02",
+          "SKU-DEMO-B",
+          "WH-DEMO-N"
+        ]
+      ],
+      "paths_truncated": false,
+      "summary": {
+        "total_affected": 4,
+        "affected_by_type": {
+          "sku": 2,
+          "warehouse": 2
+        },
+        "highest_risk_level": "high"
+      }
+    },
+    {
+      "disruption_id": "D-DEMO-3",
+      "disrupted_entity_id": "SUP-DEMO-03",
+      "disrupted_entity_type": "supplier",
+      "disruption_type": "port_strike",
+      "severity": 1.0,
+      "location": "Hyderabad",
+      "start_date": "2026-11-18",
+      "end_date": "2026-11-22",
+      "duration_days": 5,
+      "concurrent_disruption_ids": [
+        "D-DEMO-1",
+        "D-DEMO-2"
+      ],
+      "affected_entities": [],
+      "propagation_paths": [],
+      "paths_truncated": false,
+      "summary": {
+        "total_affected": 0,
+        "affected_by_type": {},
+        "highest_risk_level": "none"
+      }
+    },
+    {
+      "disruption_id": "D-DEMO-4",
+      "disrupted_entity_id": "SKU-DEMO-C",
+      "disrupted_entity_type": "sku",
+      "disruption_type": "customs_hold",
+      "severity": 0.6,
+      "location": "Mumbai",
+      "start_date": "2026-12-01",
+      "end_date": "2026-12-07",
+      "duration_days": 7,
+      "concurrent_disruption_ids": [],
+      "affected_entities": [
+        {
+          "entity_id": "WH-DEMO-S",
+          "entity_name": "Demo South Warehouse",
+          "entity_type": "warehouse",
+          "location": "Chennai",
+          "impact_score": 0.24,
+          "risk_level": "low",
+          "hops": 1
+        }
+      ],
+      "propagation_paths": [
+        [
+          "SKU-DEMO-C",
+          "WH-DEMO-S"
+        ]
+      ],
+      "paths_truncated": false,
+      "summary": {
+        "total_affected": 1,
+        "affected_by_type": {
+          "warehouse": 1
+        },
+        "highest_risk_level": "low"
+      }
+    }
+  ],
+  "combined_impact": [
+    {
+      "entity_id": "SKU-DEMO-B",
+      "entity_name": "SKU-DEMO-B",
+      "entity_type": "sku",
+      "combined_impact_score": 1.0,
+      "risk_level": "high",
+      "directly_disrupted": false,
+      "disruption_ids": [
+        "D-DEMO-2"
+      ]
+    },
+    {
+      "entity_id": "SUP-DEMO-02",
+      "entity_name": "Demo Supplier Two",
+      "entity_type": "supplier",
+      "combined_impact_score": 1.0,
+      "risk_level": "high",
+      "directly_disrupted": true,
+      "disruption_ids": [
+        "D-DEMO-2"
+      ]
+    },
+    {
+      "entity_id": "SUP-DEMO-03",
+      "entity_name": "Demo Supplier Three",
+      "entity_type": "supplier",
+      "combined_impact_score": 1.0,
+      "risk_level": "high",
+      "directly_disrupted": true,
+      "disruption_ids": [
+        "D-DEMO-3"
+      ]
+    },
+    {
+      "entity_id": "WH-DEMO-N",
+      "entity_name": "Demo North Warehouse",
+      "entity_type": "warehouse",
+      "combined_impact_score": 0.8061,
+      "risk_level": "high",
+      "directly_disrupted": false,
+      "disruption_ids": [
+        "D-DEMO-1",
+        "D-DEMO-2"
+      ]
+    },
+    {
+      "entity_id": "SUP-DEMO-01",
+      "entity_name": "Demo Supplier One",
+      "entity_type": "supplier",
+      "combined_impact_score": 0.8,
+      "risk_level": "high",
+      "directly_disrupted": true,
+      "disruption_ids": [
+        "D-DEMO-1"
+      ]
+    },
+    {
+      "entity_id": "SKU-DEMO-A",
+      "entity_name": "SKU-DEMO-A",
+      "entity_type": "sku",
+      "combined_impact_score": 0.688,
+      "risk_level": "medium",
+      "directly_disrupted": false,
+      "disruption_ids": [
+        "D-DEMO-1",
+        "D-DEMO-2"
+      ]
+    },
+    {
+      "entity_id": "SKU-DEMO-C",
+      "entity_name": "SKU-DEMO-C",
+      "entity_type": "sku",
+      "combined_impact_score": 0.6,
+      "risk_level": "medium",
+      "directly_disrupted": true,
+      "disruption_ids": [
+        "D-DEMO-4"
+      ]
+    },
+    {
+      "entity_id": "WH-DEMO-S",
+      "entity_name": "Demo South Warehouse",
+      "entity_type": "warehouse",
+      "combined_impact_score": 0.5887,
+      "risk_level": "medium",
+      "directly_disrupted": false,
+      "disruption_ids": [
+        "D-DEMO-1",
+        "D-DEMO-2",
+        "D-DEMO-4"
+      ]
+    }
+  ],
+  "graph_summary": {
+    "total_entities": 9,
+    "suppliers": 4,
+    "factories": 0,
+    "skus": 3,
+    "warehouses": 2,
+    "total_relationships": 9,
+    "backup_relationships": 1
+  },
+  "validation": {
+    "is_valid": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "issues": []
+  }
+}

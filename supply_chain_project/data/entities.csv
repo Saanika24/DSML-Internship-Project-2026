@@ -1,0 +1,13 @@
+entity_id,entity_name,entity_type,location,data_source
+S001,Eastern Steel Works,supplier,Chennai,synthetic_sample
+S002,Coastal Electronics,supplier,Visakhapatnam,synthetic_sample
+S003,Alpha Plastics,supplier,Hyderabad,synthetic_sample
+S004,Delta Metals,supplier,Pune,synthetic_sample
+S005,Sunrise Chemicals,supplier,Mumbai,synthetic_sample
+S006,Orion Components,supplier,Bengaluru,synthetic_sample
+F001,Tirupati Assembly Plant,factory,Tirupati,synthetic_sample
+F002,Hyderabad Manufacturing Unit,factory,Hyderabad,synthetic_sample
+F003,Pune Production Facility,factory,Pune,synthetic_sample
+W001,Chennai Distribution Hub,warehouse,Chennai,synthetic_sample
+W002,Bengaluru Warehouse,warehouse,Bengaluru,synthetic_sample
+W003,Mumbai Fulfilment Center,warehouse,Mumbai,synthetic_sample

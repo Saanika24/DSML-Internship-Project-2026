@@ -1,0 +1,6 @@
+disruption_id,entity_id,disruption_type,severity,location,start_date,duration_days,data_source
+D001,S001,flood,0.9,Chennai,2026-11-10,14,synthetic_sample
+D002,S002,port_strike,0.6,Visakhapatnam,2026-11-15,7,synthetic_sample
+D003,F002,power_outage,0.5,Hyderabad,2026-11-18,3,synthetic_sample
+D004,S004,fire,0.8,Pune,2026-11-20,21,synthetic_sample
+D005,W003,labor_shortage,0.4,Mumbai,2026-11-22,,synthetic_sample

@@ -1,0 +1,4 @@
+table,available_signal,interpretation
+shipments,damage_reported,Binary shipment damage indicator; no cause/severity/disruption-event identifier.
+purchase_orders,"days_late, is_on_time",Delivery delay outcomes; no disruption cause or event identifier.
+shipments,"days_late, is_on_time",Shipment delay outcomes; no disruption cause or event identifier.

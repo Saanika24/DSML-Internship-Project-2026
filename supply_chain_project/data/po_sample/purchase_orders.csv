@@ -1,0 +1,8 @@
+po_id,order_date,supplier_id,supplier_name,supplier_location,sku_id,warehouse_id,warehouse_name,warehouse_location,quantity,is_backup,data_source
+PO-DEMO-001,2026-09-02,SUP-DEMO-01,Demo Supplier One,Chennai,SKU-DEMO-A,WH-DEMO-N,Demo North Warehouse,Delhi,250,false,synthetic_sample
+PO-DEMO-002,2026-09-05,SUP-DEMO-01,Demo Supplier One,Chennai,SKU-DEMO-A,WH-DEMO-S,Demo South Warehouse,Chennai,350,false,synthetic_sample
+PO-DEMO-003,2026-09-09,SUP-DEMO-02,Demo Supplier Two,Pune,SKU-DEMO-A,WH-DEMO-N,Demo North Warehouse,Delhi,150,false,synthetic_sample
+PO-DEMO-004,2026-09-12,SUP-DEMO-02,Demo Supplier Two,Pune,SKU-DEMO-A,WH-DEMO-S,Demo South Warehouse,Chennai,250,false,synthetic_sample
+PO-DEMO-005,2026-09-15,SUP-DEMO-02,Demo Supplier Two,Pune,SKU-DEMO-B,WH-DEMO-N,Demo North Warehouse,Delhi,400,false,synthetic_sample
+PO-DEMO-006,2026-09-18,SUP-DEMO-03,Demo Supplier Three,Hyderabad,SKU-DEMO-B,WH-DEMO-N,Demo North Warehouse,Delhi,200,true,synthetic_sample
+PO-DEMO-007,2026-09-21,SUP-DEMO-04,Demo Supplier Four,Mumbai,SKU-DEMO-C,WH-DEMO-S,Demo South Warehouse,Chennai,400,false,synthetic_sample

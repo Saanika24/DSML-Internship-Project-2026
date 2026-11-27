@@ -1,0 +1,5 @@
+disruption_id,entity_id,disruption_type,severity,location,start_date,duration_days,data_source
+D-DEMO-1,SUP-DEMO-01,flood,0.8,Chennai,2026-11-10,14,synthetic_sample
+D-DEMO-2,SUP-DEMO-02,fire,1.0,Pune,2026-11-15,10,synthetic_sample
+D-DEMO-3,SUP-DEMO-03,port_strike,1.0,Hyderabad,2026-11-18,5,synthetic_sample
+D-DEMO-4,SKU-DEMO-C,customs_hold,0.6,Mumbai,2026-12-01,7,synthetic_sample

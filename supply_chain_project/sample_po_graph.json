@@ -1,0 +1,141 @@
+{
+  "entities": [
+    {
+      "entity_id": "SUP-DEMO-01",
+      "entity_name": "Demo Supplier One",
+      "entity_type": "supplier",
+      "location": "Chennai",
+      "data_source": "purchase_orders"
+    },
+    {
+      "entity_id": "SUP-DEMO-02",
+      "entity_name": "Demo Supplier Two",
+      "entity_type": "supplier",
+      "location": "Pune",
+      "data_source": "purchase_orders"
+    },
+    {
+      "entity_id": "SUP-DEMO-03",
+      "entity_name": "Demo Supplier Three",
+      "entity_type": "supplier",
+      "location": "Hyderabad",
+      "data_source": "purchase_orders"
+    },
+    {
+      "entity_id": "SUP-DEMO-04",
+      "entity_name": "Demo Supplier Four",
+      "entity_type": "supplier",
+      "location": "Mumbai",
+      "data_source": "purchase_orders"
+    },
+    {
+      "entity_id": "SKU-DEMO-A",
+      "entity_name": "SKU-DEMO-A",
+      "entity_type": "sku",
+      "location": null,
+      "data_source": "purchase_orders"
+    },
+    {
+      "entity_id": "SKU-DEMO-B",
+      "entity_name": "SKU-DEMO-B",
+      "entity_type": "sku",
+      "location": null,
+      "data_source": "purchase_orders"
+    },
+    {
+      "entity_id": "SKU-DEMO-C",
+      "entity_name": "SKU-DEMO-C",
+      "entity_type": "sku",
+      "location": null,
+      "data_source": "purchase_orders"
+    },
+    {
+      "entity_id": "WH-DEMO-N",
+      "entity_name": "Demo North Warehouse",
+      "entity_type": "warehouse",
+      "location": "Delhi",
+      "data_source": "purchase_orders"
+    },
+    {
+      "entity_id": "WH-DEMO-S",
+      "entity_name": "Demo South Warehouse",
+      "entity_type": "warehouse",
+      "location": "Chennai",
+      "data_source": "purchase_orders"
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "SUP-DEMO-01",
+      "target_id": "SKU-DEMO-A",
+      "relationship_type": "supplies",
+      "dependency_score": 0.6,
+      "material": "SKU-DEMO-A",
+      "is_backup": false
+    },
+    {
+      "source_id": "SUP-DEMO-02",
+      "target_id": "SKU-DEMO-A",
+      "relationship_type": "supplies",
+      "dependency_score": 0.4,
+      "material": "SKU-DEMO-A",
+      "is_backup": false
+    },
+    {
+      "source_id": "SUP-DEMO-02",
+      "target_id": "SKU-DEMO-B",
+      "relationship_type": "supplies",
+      "dependency_score": 1.0,
+      "material": "SKU-DEMO-B",
+      "is_backup": false
+    },
+    {
+      "source_id": "SUP-DEMO-03",
+      "target_id": "SKU-DEMO-B",
+      "relationship_type": "supplies",
+      "dependency_score": 0.5,
+      "material": "SKU-DEMO-B",
+      "is_backup": true
+    },
+    {
+      "source_id": "SUP-DEMO-04",
+      "target_id": "SKU-DEMO-C",
+      "relationship_type": "supplies",
+      "dependency_score": 1.0,
+      "material": "SKU-DEMO-C",
+      "is_backup": false
+    },
+    {
+      "source_id": "SKU-DEMO-A",
+      "target_id": "WH-DEMO-N",
+      "relationship_type": "ships_to",
+      "dependency_score": 0.4,
+      "material": "SKU-DEMO-A",
+      "is_backup": false
+    },
+    {
+      "source_id": "SKU-DEMO-A",
+      "target_id": "WH-DEMO-S",
+      "relationship_type": "ships_to",
+      "dependency_score": 0.6,
+      "material": "SKU-DEMO-A",
+      "is_backup": false
+    },
+    {
+      "source_id": "SKU-DEMO-B",
+      "target_id": "WH-DEMO-N",
+      "relationship_type": "ships_to",
+      "dependency_score": 0.6,
+      "material": "SKU-DEMO-B",
+      "is_backup": false
+    },
+    {
+      "source_id": "SKU-DEMO-C",
+      "target_id": "WH-DEMO-S",
+      "relationship_type": "ships_to",
+      "dependency_score": 0.4,
+      "material": "SKU-DEMO-C",
+      "is_backup": false
+    }
+  ]
+}

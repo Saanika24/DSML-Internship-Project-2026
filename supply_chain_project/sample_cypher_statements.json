@@ -1,0 +1,293 @@
+[
+  {
+    "query": "CREATE CONSTRAINT entity_id_unique IF NOT EXISTS FOR (e:Entity) REQUIRE e.entity_id IS UNIQUE",
+    "parameters": {}
+  },
+  {
+    "query": "CREATE CONSTRAINT disruption_id_unique IF NOT EXISTS FOR (d:Disruption) REQUIRE d.disruption_id IS UNIQUE",
+    "parameters": {}
+  },
+  {
+    "query": "UNWIND $rows AS row\nMERGE (e:Entity {entity_id: row.entity_id})\nON CREATE SET e.risk_score = 0.0, e.risk_level = 'none', e.directly_disrupted = false, e.active_disruption_ids = []\nSET e:Factory\nSET e += row.props",
+    "parameters": {
+      "rows": [
+        {
+          "entity_id": "F001",
+          "props": {
+            "entity_name": "Tirupati Assembly Plant",
+            "entity_type": "factory",
+            "location": "Tirupati",
+            "data_source": "synthetic_sample"
+          }
+        },
+        {
+          "entity_id": "F002",
+          "props": {
+            "entity_name": "Hyderabad Manufacturing Unit",
+            "entity_type": "factory",
+            "location": "Hyderabad",
+            "data_source": "synthetic_sample"
+          }
+        },
+        {
+          "entity_id": "F003",
+          "props": {
+            "entity_name": "Pune Production Facility",
+            "entity_type": "factory",
+            "location": "Pune",
+            "data_source": "synthetic_sample"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "query": "UNWIND $rows AS row\nMERGE (e:Entity {entity_id: row.entity_id})\nON CREATE SET e.risk_score = 0.0, e.risk_level = 'none', e.directly_disrupted = false, e.active_disruption_ids = []\nSET e:Supplier\nSET e += row.props",
+    "parameters": {
+      "rows": [
+        {
+          "entity_id": "S001",
+          "props": {
+            "entity_name": "Eastern Steel Works",
+            "entity_type": "supplier",
+            "location": "Chennai",
+            "data_source": "synthetic_sample"
+          }
+        },
+        {
+          "entity_id": "S002",
+          "props": {
+            "entity_name": "Coastal Electronics",
+            "entity_type": "supplier",
+            "location": "Visakhapatnam",
+            "data_source": "synthetic_sample"
+          }
+        },
+        {
+          "entity_id": "S003",
+          "props": {
+            "entity_name": "Alpha Plastics",
+            "entity_type": "supplier",
+            "location": "Hyderabad",
+            "data_source": "synthetic_sample"
+          }
+        },
+        {
+          "entity_id": "S004",
+          "props": {
+            "entity_name": "Delta Metals",
+            "entity_type": "supplier",
+            "location": "Pune",
+            "data_source": "synthetic_sample"
+          }
+        },
+        {
+          "entity_id": "S005",
+          "props": {
+            "entity_name": "Sunrise Chemicals",
+            "entity_type": "supplier",
+            "location": "Mumbai",
+            "data_source": "synthetic_sample"
+          }
+        },
+        {
+          "entity_id": "S006",
+          "props": {
+            "entity_name": "Orion Components",
+            "entity_type": "supplier",
+            "location": "Bengaluru",
+            "data_source": "synthetic_sample"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "query": "UNWIND $rows AS row\nMERGE (e:Entity {entity_id: row.entity_id})\nON CREATE SET e.risk_score = 0.0, e.risk_level = 'none', e.directly_disrupted = false, e.active_disruption_ids = []\nSET e:Warehouse\nSET e += row.props",
+    "parameters": {
+      "rows": [
+        {
+          "entity_id": "W001",
+          "props": {
+            "entity_name": "Chennai Distribution Hub",
+            "entity_type": "warehouse",
+            "location": "Chennai",
+            "data_source": "synthetic_sample"
+          }
+        },
+        {
+          "entity_id": "W002",
+          "props": {
+            "entity_name": "Bengaluru Warehouse",
+            "entity_type": "warehouse",
+            "location": "Bengaluru",
+            "data_source": "synthetic_sample"
+          }
+        },
+        {
+          "entity_id": "W003",
+          "props": {
+            "entity_name": "Mumbai Fulfilment Center",
+            "entity_type": "warehouse",
+            "location": "Mumbai",
+            "data_source": "synthetic_sample"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "query": "UNWIND $rows AS row\nMATCH (a:Entity {entity_id: row.source_id})\nMATCH (b:Entity {entity_id: row.target_id})\nMERGE (a)-[r:SHIPS_TO]->(b)\nSET r += row.props",
+    "parameters": {
+      "rows": [
+        {
+          "source_id": "F001",
+          "target_id": "W001",
+          "props": {
+            "relationship_type": "ships_to",
+            "dependency_score": 0.6,
+            "material": "finished_goods",
+            "is_backup": false
+          }
+        },
+        {
+          "source_id": "F001",
+          "target_id": "W002",
+          "props": {
+            "relationship_type": "ships_to",
+            "dependency_score": 0.4,
+            "material": "finished_goods",
+            "is_backup": false
+          }
+        },
+        {
+          "source_id": "F002",
+          "target_id": "W002",
+          "props": {
+            "relationship_type": "ships_to",
+            "dependency_score": 0.6,
+            "material": "finished_goods",
+            "is_backup": false
+          }
+        },
+        {
+          "source_id": "F002",
+          "target_id": "W003",
+          "props": {
+            "relationship_type": "ships_to",
+            "dependency_score": 0.5,
+            "material": "finished_goods",
+            "is_backup": false
+          }
+        },
+        {
+          "source_id": "F003",
+          "target_id": "W001",
+          "props": {
+            "relationship_type": "ships_to",
+            "dependency_score": 0.4,
+            "material": "finished_goods",
+            "is_backup": false
+          }
+        },
+        {
+          "source_id": "F003",
+          "target_id": "W003",
+          "props": {
+            "relationship_type": "ships_to",
+            "dependency_score": 0.5,
+            "material": "finished_goods",
+            "is_backup": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "query": "UNWIND $rows AS row\nMATCH (a:Entity {entity_id: row.source_id})\nMATCH (b:Entity {entity_id: row.target_id})\nMERGE (a)-[r:SUPPLIES]->(b)\nSET r += row.props",
+    "parameters": {
+      "rows": [
+        {
+          "source_id": "S001",
+          "target_id": "F001",
+          "props": {
+            "relationship_type": "supplies",
+            "dependency_score": 0.6,
+            "material": "steel",
+            "is_backup": false
+          }
+        },
+        {
+          "source_id": "S002",
+          "target_id": "F001",
+          "props": {
+            "relationship_type": "supplies",
+            "dependency_score": 0.3,
+            "material": "electronics",
+            "is_backup": false
+          }
+        },
+        {
+          "source_id": "S002",
+          "target_id": "F002",
+          "props": {
+            "relationship_type": "supplies",
+            "dependency_score": 0.4,
+            "material": "electronics",
+            "is_backup": false
+          }
+        },
+        {
+          "source_id": "S003",
+          "target_id": "F002",
+          "props": {
+            "relationship_type": "supplies",
+            "dependency_score": 0.5,
+            "material": "plastics",
+            "is_backup": false
+          }
+        },
+        {
+          "source_id": "S004",
+          "target_id": "F001",
+          "props": {
+            "relationship_type": "supplies",
+            "dependency_score": 0.5,
+            "material": "steel",
+            "is_backup": true
+          }
+        },
+        {
+          "source_id": "S004",
+          "target_id": "F003",
+          "props": {
+            "relationship_type": "supplies",
+            "dependency_score": 0.7,
+            "material": "metals",
+            "is_backup": false
+          }
+        },
+        {
+          "source_id": "S005",
+          "target_id": "F002",
+          "props": {
+            "relationship_type": "supplies",
+            "dependency_score": 0.1,
+            "material": "chemicals",
+            "is_backup": false
+          }
+        },
+        {
+          "source_id": "S006",
+          "target_id": "F003",
+          "props": {
+            "relationship_type": "supplies",
+            "dependency_score": 0.3,
+            "material": "components",
+            "is_backup": false
+          }
+        }
+      ]
+    }
+  }
+]

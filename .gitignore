@@ -9,3 +9,14 @@
 # Local datasets
 /data/raw/
 /data/temp_dataset/
+
+# Experimental model artifacts
+/models_updated_dataset/
+
+# Conditional regression experiment artifacts
+/models_conditional_regression/
+/models_classifier_experiment/
+/models_regression_experiment/
+/models_integrated_validation_experiment/
+/models_error_analysis/
+/models_threshold_experiment/

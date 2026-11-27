@@ -156,3 +156,143 @@ def prepare_prediction_inputs(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series
     y_reg = df["delay_days"].copy()
 
     return X, y_clf, y_reg
+
+INFERENCE_REQUIRED_COLUMNS = [
+    "supplier_id",
+    "sku_id",
+    "warehouse",
+    "order_date",
+    "promised_delivery_date",
+    "quantity_ordered",
+    "unit_cost",
+]
+
+
+def build_inference_features(
+    new_orders: pd.DataFrame,
+    historical_orders: pd.DataFrame,
+) -> pd.DataFrame:
+    """
+    Build order-time features for new, unlabeled purchase orders.
+
+    new_orders:
+        New purchase orders. Does not require delivery dates or target labels.
+
+    historical_orders:
+        Historical purchase orders with actual delivery dates and target labels.
+        Only orders placed and delivered strictly before each new order date
+        contribute to supplier-history features.
+    """
+
+    if not isinstance(new_orders, pd.DataFrame):
+        raise TypeError("new_orders must be a pandas DataFrame.")
+
+    if new_orders.empty:
+        raise ValueError("new_orders cannot be empty.")
+
+    missing = [
+        col for col in INFERENCE_REQUIRED_COLUMNS
+        if col not in new_orders.columns
+    ]
+    if missing:
+        raise ValueError(f"Missing new-order columns: {missing}")
+
+    if not isinstance(historical_orders, pd.DataFrame):
+        raise TypeError("historical_orders must be a pandas DataFrame.")
+
+    if historical_orders.empty:
+        raise ValueError(
+            "historical_orders cannot be empty. "
+            "Provide historical purchase orders with delivery outcomes."
+        )
+
+    # Reuse the existing historical-data validation and point-in-time logic.
+    history = build_purchase_order_features(historical_orders)
+
+    out = new_orders.copy().reset_index(drop=True)
+
+    if out[["supplier_id", "sku_id", "warehouse"]].isna().any().any():
+        raise ValueError(
+            "supplier_id, sku_id, and warehouse cannot be missing."
+        )
+
+    out["order_date"] = pd.to_datetime(
+        out["order_date"], errors="coerce"
+    )
+    out["promised_delivery_date"] = pd.to_datetime(
+        out["promised_delivery_date"], errors="coerce"
+    )
+
+    if out["order_date"].isna().any():
+        raise ValueError("Invalid or missing order_date values.")
+
+    if out["promised_delivery_date"].isna().any():
+        raise ValueError(
+            "Invalid or missing promised_delivery_date values."
+        )
+
+    for col in ["quantity_ordered", "unit_cost"]:
+        out[col] = pd.to_numeric(out[col], errors="coerce")
+        if out[col].isna().any():
+            raise ValueError(f"Invalid or missing values in {col}.")
+
+    if (out["quantity_ordered"] <= 0).any():
+        raise ValueError("quantity_ordered must be greater than zero.")
+
+    if (out["unit_cost"] < 0).any():
+        raise ValueError("unit_cost cannot be negative.")
+
+    out["order_month"] = out["order_date"].dt.month
+    out["order_day_of_week"] = out["order_date"].dt.day_of_week
+    out["order_quarter"] = out["order_date"].dt.quarter
+    out["order_is_weekend"] = (
+        out["order_date"].dt.day_of_week >= 5
+    ).astype(int)
+
+    out["planned_lead_time_days"] = (
+        out["promised_delivery_date"] - out["order_date"]
+    ).dt.days
+
+    if (out["planned_lead_time_days"] < 0).any():
+        raise ValueError(
+            "Promised delivery date cannot precede order date."
+        )
+
+    history["order_date"] = pd.to_datetime(history["order_date"])
+    history["actual_delivery_date"] = pd.to_datetime(
+        history["actual_delivery_date"]
+    )
+
+    out["supplier_prior_order_count"] = 0.0
+    out["supplier_prior_on_time_rate"] = 0.0
+    out["supplier_prior_mean_days_late"] = 0.0
+    out["supplier_prior_late_order_count"] = 0.0
+
+    for idx, order in out.iterrows():
+        current_date = order["order_date"]
+
+        prior_mask = (
+            (history["supplier_id"] == order["supplier_id"])
+            & (history["order_date"] < current_date)
+            & (history["actual_delivery_date"] < current_date)
+            & history["actual_delivery_date"].notna()
+        )
+
+        prior = history.loc[prior_mask]
+
+        if prior.empty:
+            continue
+
+        out.at[idx, "supplier_prior_order_count"] = len(prior)
+        out.at[idx, "supplier_prior_on_time_rate"] = (
+            prior["is_on_time"].mean()
+        )
+        out.at[idx, "supplier_prior_mean_days_late"] = (
+            prior["days_late"].mean()
+        )
+        out.at[idx, "supplier_prior_late_order_count"] = (
+            prior["days_late"].gt(0).sum()
+        )
+
+    # Return exactly the model input columns, in the expected order.
+    return out[MODEL_FEATURE_COLUMNS].copy()

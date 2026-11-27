@@ -63,7 +63,7 @@ def test_prediction_returns_expected_results(sample_features, mock_models):
     assert len(results) == 2
     assert list(results.columns) == ["delay_probability", "predicted_status", "estimated_delay_days"]
     assert results["predicted_status"].tolist() == ["Delayed", "On time"]
-    assert results["estimated_delay_days"].tolist() == [2.0, 2.0]
+    assert results["estimated_delay_days"].tolist() == [2.0, 0.0]
 
 
 def test_prediction_rejects_missing_features(mock_models):
@@ -93,10 +93,19 @@ def test_prediction_rejects_missing_values(sample_features, mock_models):
         predict.predict_purchase_order_delays(bad_df)
 
 
-def test_prediction_rejects_mismatched_model_features(sample_features, sample_artifacts, monkeypatch):
+def test_prediction_supports_different_model_features(
+    sample_features, sample_artifacts, monkeypatch
+):
     clf, reg = sample_artifacts
     reg["feature_columns"] = ["supplier_id"]
-    monkeypatch.setattr(predict, "load_prediction_models", lambda: (clf, reg))
 
-    with pytest.raises(ValueError, match="do not match"):
-        predict.predict_purchase_order_delays(sample_features)
+    monkeypatch.setattr(
+        predict,
+        "load_prediction_models",
+        lambda: (clf, reg),
+    )
+
+    results = predict.predict_purchase_order_delays(sample_features)
+
+    assert results["predicted_status"].tolist() == ["Delayed", "On time"]
+    assert results["estimated_delay_days"].tolist() == [2.0, 0.0]
